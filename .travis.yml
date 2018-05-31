@@ -1,11 +1,39 @@
 language: ruby
-cache: bundler
-gemfile: docs/Gemfile
-script:
-  - bundle exec jekyll algolia --source docs --destination docs/_site --config docs/_config.yml
-branches:
-  only:
-    # Change this to gh-pages if you're deploying using the gh-pages branch
-    - master
 rvm:
- - 2.4
+- 2.3.3
+
+cache: bundler
+
+
+env:
+  global:
+    - secure: ""
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+script: jekyll build && htmlproofer ./_site
+
+
+install:
+  - gem install bundler
+  - bundle install
+#  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+#  - bash miniconda.sh -b -p $HOME/miniconda
+#  - export PATH="$HOME/miniconda/bin:$PATH"
+#  - hash -r
+#  - conda config --set always_yes yes --set changeps1 no
+#  - conda config --add channels conda-forge # For sphinxcontrib.autoprogram
+#  - conda update -q conda
+#  - conda info -a
+#  - conda create -q -n doc-build-environment python=3.6 doctr pygments_anyscript
+#  - source activate doc-build-environment
+
+before_script:
+  - rvm get head || true
+
+script:
+  - set -e
+  - jekyll build && htmlproofer ./_site
+  #- doctr deploy --deploy-repo melund/anyscript_test .;
+
+
+sudo: false # route your build to the container-based infrastructure for a faster build
