@@ -8,9 +8,6 @@ env:
     - secure: ""
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
-script: jekyll build && htmlproofer ./_site
-
-
 install:
   - gem install bundler
   - bundle install
@@ -30,7 +27,8 @@ before_script:
 
 script:
   - set -e
-  - jekyll build && htmlproofer ./_site
+  - jekyll build
+  - htmlproofer ./_site
   #- doctr deploy --deploy-repo melund/anyscript_test .;
 
 
