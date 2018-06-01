@@ -10,8 +10,6 @@ env:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
 install:
-  - gem install bundler
-  - bundle install
   - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
   - bash miniconda.sh -b -p $HOME/miniconda
   - export PATH="$HOME/miniconda/bin:$PATH"
@@ -23,6 +21,8 @@ install:
   - conda create -q -n deploy-environment python=3.6 doctr 
   - conda create -q -n build-environment python=2.7 pygments_anyscript 
   - source activate build-environment
+  - gem install bundler
+  - bundle install
 
 before_script:
   - rvm get head || true
