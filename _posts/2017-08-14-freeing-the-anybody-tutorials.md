@@ -127,7 +127,7 @@ The new source files for tutorials are hosted on the AnyBody Github account toge
 
 Contributions are always welcome! So if you find typos, missing links or
 anything else help us fix it. It is easy. Just fork [the repository on
-GitHub](https://github.com/AnyBody/anybody-tutorial>), make the changes, and
+GitHub](https://github.com/AnyBody/anybody-tutorial), make the changes, and
 issue a pull request. 
 
 Every pull request is automatically tested, to ensure that Sphinx builds the
