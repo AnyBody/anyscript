@@ -30,7 +30,7 @@ before_script:
 script:
   - set -e
   - bundle exec jekyll build
-  #- htmlproofer ./_site
+  #- htmlproofer --alt-ignore '/.*/' ./_site
   - source activate deploy-environment
   - doctr deploy --built-docs ./_site --deploy-branch-name master --deploy-repo melund/melund.github.io .;
 
