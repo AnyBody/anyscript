@@ -1,12 +1,34 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Quick-Start guide"
+    url: /getting-started/
+    
+  - title: 'Blog posts'
+    url: /all-posts/
+
+  - title: 'Forum <i class="fa fa-external-link" aria-hidden="true"></i>'
+    url: http://forum.anyscript.org/
+
+  - title: 'Wiki <i class="fa fa-external-link" aria-hidden="true"></i>'
+    url: https://github.com/AnyBody/support/wiki
+
+  - title: 'Repositories <i class="fa fa-external-link" aria-hidden="true"></i>'
+    url: https://github.com/AnyBody/
+
+    
+    
+posts:
+    - title: "Show all posts:"
+      children:
+        - title: "Grid view"
+          url: "/all-posts/"
+        - title: "List view"
+          url: "/year-archive/"
+    - title: "Sort by:"
+      children:
+        - title: "year"
+          url: "/year-archive/"
+        - title: "category"
+          url: "/categories/"
+        - title: "tags"
+          url: "/tags/"
