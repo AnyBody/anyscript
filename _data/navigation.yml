@@ -6,13 +6,13 @@ main:
   - title: 'Blog posts'
     url: /all-posts/
 
-  - title: 'Forum <i class="fas fa-external-link" aria-hidden="true"></i>'
+  - title: 'Forum <i class="fas fa-external-link-alt" aria-hidden="true"></i>'
     url: http://forum.anyscript.org/
 
-  - title: 'Wiki <i class="fas fa-external-link" aria-hidden="true"></i>'
+  - title: 'Wiki <i class="fas fa-external-link-alt" aria-hidden="true"></i>'
     url: https://github.com/AnyBody/support/wiki
 
-  - title: 'Repositories <i class="fas fa-external-link" aria-hidden="true"></i>'
+  - title: 'Repositories <i class="fas fa-external-link-alt" aria-hidden="true"></i>'
     url: https://github.com/AnyBody/
 
     
