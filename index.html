@@ -1,4 +1,49 @@
 ---
-layout: home
-author_profile: true
+title: Welcome to AnyScript.org
+layout: splash
+header:
+  overlay_color: "#5e616c"
+  overlay_image: assets/images/header_splash4.jpg
+  cta_label: "<i class='fa fa-life-ring'></i> Quick-Start for new users"
+  cta_url: "getting-started/"
+  caption:
+excerpt: >
+    An open community for users of the AnyBody Modeling System and a
+    resource for writing AnyScript code.<br/><small>Managed jointly by the
+    <a href="http://www.biomechanics.m-tech.aau.dk/">AnyBody Research group</a> and <a href="https://www.anybodytech.com">AnyBody Technology</a></small>
+intro:
+  - excerpt: 'Follow news and webcasts on [<i class="fa fa-youtube fa-lg" aria-hidden="true"></i>](https://youtube.dk/anybodytech){: .btn .btn--youtube} [<i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>](https://www.linkedin.com/company/anybody-technology-a-s){: .btn .btn--linkedin} '
+feature_row:
+  - image_path: assets/images/forum-feature4.png
+    alt: "Forum"
+    title: "Get help from experts"
+    excerpt: "The Forum is a place to give and get help from other users. Get help and and learn from the experts."
+    url: "http://forum.anyscript.org"
+    btn_label: '<i class="fa fa-users"></i> Check the Forum'
+  - image_path: assets/images/wiki-feature2.png
+    alt: "Wiki site"
+    title: "Find tips & tricks"
+    excerpt: "The wiki has a wealth of information, tips&tricks and FAQs for working with the AnyBody Modeling System."
+    url: "https://github.com/AnyBody/support/wiki"
+    btn_label: '<i class="fa fa-file-text"></i> Browse the Wiki'
+  - image_path: assets/images/project-hosting2.png
+    alt: "Project hosting"
+    title: "Join development"
+    excerpt: "The repositories on Github has large and small models under development. Download cutting edge models or join development."
+    url: "https://github.com/AnyBody/"
+    btn_label: '<i class="fa fa-github-square"></i> Visit GitHub'
 ---
+
+{% include feature_row id="intro" type="center" %}
+
+{% include feature_row %}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% for post in paginator.posts %}
+{% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}
+
+

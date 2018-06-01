@@ -1,0 +1,7 @@
+_id: 5791d8b0-46f4-11e7-9ea3-250535a16df3
+message: "Hi Tao. When you add simple joints to your multibody models, then the axis of rotation will naturally become the joint axis. The method for calculating the intantaneous axis of rotation is mostly useful for analyzing existing measured kinematic data. That could be from normal MoCap experiments or bone pin studies.\r\n\r\nI could maybe also be usefull for what you suggest: Perscribing the rotations and translations in a joints with repect to time or a joint angle. But for that you would need to first drive the other degrees of freedom some other way. The IOR script could then be usefull to calculate the point where reactions forces between the two segments should be applied in order to avoid the reaction forces acting as a motor at the joint. This is not something I have used my self, and it would probably not be trivial to implement. But it is a nice idea."
+name: Morten
+email: f1d48691b8337f5e173f2575cecb1f6d
+url: ''
+hidden: ''
+date: '2017-06-01T18:01:31.743Z'

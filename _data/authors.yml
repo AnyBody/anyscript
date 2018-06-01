@@ -1,0 +1,43 @@
+mel:
+  name: "Morten Enemark Lund"
+  bio: "R&D Engineer at AnyBody Technology."
+  location: "Aalborg, Denmark"
+  avatar: "/assets/images/people/mel.jpg"
+  github: "melund"
+  linkedin: "biomedical"
+  keybase: "mortenlund"
+
+kpr:
+  name: "Kasper Pihl Rasmussen"
+  #email: "cornelius@thewhip.com"
+  bio: "Simulations Engineer at AnyBody Technology"
+  avatar: "/assets/images/bio-photo.jpg"
+
+ms:
+  name: "Ioan-Matei Sarivan"
+  bio: "Software Developer @ AnyBody Technology, Robotics Student @ Aalborg University"
+  location: "Aalborg, Denmark"
+  avatar: "/assets/images/people/ms.jpg"
+  github: "MateiSarivan"
+  linkedin: "ioan-matei-sarivan-94922a107"
+
+st:
+  name: "Søren Tørholm, PhD"
+  bio: "Head of Services at AnyBody Technology."
+  location: "Aalborg, Denmark"
+  avatar: "/assets/images/people/st.jpg"
+  github: "toerholm"
+
+ag:
+  name: "Anantharaman Gopalakrishnan, PhD"
+  bio: "Consultant and Simulations Guru at AnyBody Technology."
+  location: "Aalborg, Denmark"
+  avatar: "/assets/images/people/ag.jpg"
+  facebook: "https://www.facebook.com/BaritoneBard/"
+
+msa:
+  name: "Michael Skipper Andersen, PhD"
+  bio: "Associate professor at Aalborg University."
+  location: "Aalborg, Denmark"
+  avatar: "/assets/images/people/msa.png"
+  github: "msan00"
