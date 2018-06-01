@@ -133,7 +133,7 @@ for a complete list of options.
 
 Once added, some new operations will appear in the model tree. 
 
-![alt]({{"/assets/images/posts/video_operation_preview.png"|| absolute_url}})
+![alt]({{"/assets/images/posts/video_operation_preview.png" | relative_url}})
 {: .full}
 
 

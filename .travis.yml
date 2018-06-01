@@ -5,8 +5,8 @@ cache: bundler
 
 env:
   global:
-    # Doctr deploy key for melund/anyscript_test
-    - secure: "nTpTm19nQWJ1P1i/fu47eEKd/B4WOlGtHbntoD27kWyUb+32WOva0iPWlWlJPSrGaJ6BOxT2brKuUSyNC/5GbQ+tiyKIBR6x+G6fDB9H55zwMgVRIp+aTe1Z41y7lQW/E2SYyetJVXfEk0TUJRsakuaBkpOQjBek67ncAu0mMCHM76Z4s08Xx7IxdshtQxEwdkMl+thsuQdzugQ9gw/aY16JZjTUZGJKu+2M08QAkCbJ1I1PIJ9Nr7o7rSEpMZoPev+m8Wyel2KiNxYeGeAxrn3i5BWzk0tD6aBs3l+WKhdeYV1ALxczbmyG6yX9HXkHX+HCHcbUcHdX11VK5X/1ZCOS7illSMoIht+Aj8XzxWlJgX17htn7vEBfSR+6J1/V4U8MChFNy7gxOTK4OlHIm+bt5II20tUjKphSp7naaSnTARumi+CcZXXMKDFkyylJViNVgrgnfSEcLOxSSLazScnQN98V8+dIy0LHMnRPBRiSZtkIK15ih59wCd+0RuIj2Mt+rNZsKKtJPK9d4tUF5ksRG6tUpDm/7DrU4hdEflEG9MxO6WGsFa/tTLKHtX8lo4at2m8phN+wIa51X/Yud8uhi9Bu7hXW5JFiUpWEIAMSexyizD828OlAL/w1JWTnvLBi+CQiP6IUUq2GQZVI6g9Gwl94n6sLXC6Wlqivloo="
+    # Doctr deploy key for melund/melund.github.io
+    - secure: "qOyWIVnt0ljrbGSiJ6c3kaND2Mle5gFUw+1bOSdjU/+QX/fqmRKNCAzxAoEBQ9kzJsoKZyDGOpjC4ru71xqKqvjTSHyJmmXB307/vG18xr9UNbPYfG0WePJGsYpmrT4i73JIZYoQaIfFNBukbXswOqvILjvy/9DBRTmDzzD9dGrllEs5LrapraWuPCSrB9DfDSMHFYSnGq62bMiS7lO0X2wUvyoiMLyNNKoO+t4n+wIqulbEv6iy0nOdb+XTNnT7S18HtcscMZiHu7y4AYsG0G9GU+W9NOam2mQWcWfkiUDjI77g3yjCyUzPrpz1lBI98k5HojCuxtzz5zaQYfKbg8GFM9Furd5XDoQnT24sEmVa1Yd+9yDECBCCSeFc+DF0gCTmnTBdWApN5X0JpMDebrJEu2BAh01I/xbjiWLFOVT+xCmS2uCutiuSH2H9Obr9mIb0txdMWyCCN3svj8oZfndMF+9HEl1BWJ6zR83bpNSMwy3nkGN+Z1FZqbXrTG/T5Vwi4f81uc8YlOKmPzxRsmXrV1LvSqmV8POGeF6bu79UN29B2TISeXizlUXjz9YCPhsj+FlLtjo2QUrvFwS2tXac8v4Gw6nIkJt+eJqMHFp7R+mGJ7Cbr2VAcS86JdiNthGZUGpwhIGH+kXDjq9MCx/t8h1XY4iihLVBomDWfKQ="
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
 install:
@@ -30,7 +30,7 @@ script:
   - set -e
   - bundle exec jekyll build
   - htmlproofer ./_site
-  - doctr deploy --built-docs ./_site --deploy-branch-name master --deploy-repo melund/anyscript_test .;
+  - doctr deploy --built-docs ./_site --deploy-branch-name master --deploy-repo melund/melund.github.io .;
 
 
 sudo: false # route your build to the container-based infrastructure for a faster build
