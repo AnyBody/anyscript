@@ -19,6 +19,14 @@
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
+    {% if page.hidden %}
+    {% unless page.no_draft %}
+    <div id="watermark">
+<p>Draft Draft Draft<br/>Draft Draft Draft Draft<br/>Draft Draft Draft Draft Draft</p>
+    </div>
+    {% endunless %}
+    {% endif %}
+
     <div class="initial-content">
       {{ content }}
     </div>

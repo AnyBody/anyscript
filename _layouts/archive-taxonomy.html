@@ -9,7 +9,9 @@ author_profile: false
   <div class="archive">
     <h1 class="page__title">{{ page.title }}</h1>
     {% for post in page.posts %}
+    {% unless post.hidden %}
       {% include archive-single.html %}
+    {% endunless %}
     {% endfor %}
   </div>
 </div>

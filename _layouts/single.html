@@ -74,7 +74,9 @@ layout: default
       <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
       <div class="grid__wrapper">
         {% for post in site.related_posts limit:4 %}
+        {% unless post.hidden %}
           {% include archive-single.html type="grid" %}
+        {% endunless %}
         {% endfor %}
       </div>
     </div>
@@ -84,7 +86,9 @@ layout: default
       <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
       <div class="grid__wrapper">
         {% for post in site.posts limit:4 %}
+        {% unless post.hidden %}
           {% include archive-single.html type="grid" %}
+        {% endunless %}
         {% endfor %}
       </div>
     </div>
