@@ -28,7 +28,7 @@ before_script:
 script:
   - set -e
   - bundle exec jekyll build
-  #- htmlproofer ./_site
+  - htmlproofer ./_site
   - source activate doc-build-environment
   - doctr deploy --built-docs ./_site --deploy-branch-name master --deploy-repo melund/anyscript_test .;
 
