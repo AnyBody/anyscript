@@ -15,19 +15,19 @@ theme                  : "minimal-mistakes-jekyll"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Site Title"
+locale                   : "en"
+title                    : "AnyScript Community"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Morten Enemark Lund"
+description              : "A community for the users of AnyBody Modeling System and the AnyScript language."
+####url                      : "https://anyscript.org"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+####repository               : "AnyBody/anybody.github.io"
+teaser                   : "/assets/images/teaser.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "staticman" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -38,21 +38,22 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
 staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment."
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
+  allowedFields          : ["name", "email", "url", "message"]
+  branch                 : "master"
+  commitMessage          : "New comment."
+  filename               : comment-{@timestamp}
+  format                 : "yaml"
+  moderation             : true
+  name                   : "AnyScript.org"
+  path                   : "_data/comments/{options.slug}"
+  requiredFields         : ['name', 'email', 'message']
   transforms:
-    email                : # "md5"
+    email                : "md5"
   generatedFields:
     date:
-      type               : # "date"
+      type               : "date"
       options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 reCaptcha:
   siteKey                :
   secret                 :
@@ -70,7 +71,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
+####google_site_verification : "Gads1dEJfrM11RlSRBUKWHHjKWkf_JfNOC1Deq7LaF0"
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
@@ -82,44 +83,50 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/images/og_image.jpg"
+logo                     : "/assets/images/anyscript_logo_community.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : "Organization"
+  name                   : "AnyBody Technology"
+  links: 
+    linkedin         : "https://www.linkedin.com/company/anybody-technology-a-s"
+    github           : "https://github.com/anybody"
+    youtube          : "https://www.youtube.com/user/anybodytech"
+    facebook         : "https://www.facebook.com/groups/AnyBodyGroup/"
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  ###provider               : "google" # false (default), "google", "google-universal", "custom"
+  provider               : false
   google:
-    tracking_id          :
+    tracking_id          : "UA-201751-2"
     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "AnyBody Technology"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
+  bio              : "Experts in Musculoskeletal Modeling and simulations."
+  location         : "Aalborg, Denmark"
+  email            : "sales@anybodytech.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : "https://www.facebook.com/groups/AnyBodyGroup/"
   foursquare       :
-  github           :
+  github           : "anybody"
   gitlab           :
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "anybody-technology-a-s"
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
@@ -129,7 +136,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  youtube          :  "https://youtube.com/anybodytech"
 
 
 # Reading Files
@@ -205,7 +212,10 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
+  ###- jekyll-github-metadata
   - jekyll-sitemap
+  ###- jekyll-mentions
+  ###- jekyll-redirect-from
   - jekyll-gist
   - jekyll-feed
   - jemoji
@@ -213,7 +223,10 @@ plugins:
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
+  ###- jekyll-github-metadata
   - jekyll-sitemap
+  ###- jekyll-mentions
+  ###- jekyll-redirect-from
   - jekyll-gist
   - jekyll-feed
   - jemoji
