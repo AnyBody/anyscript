@@ -21,6 +21,7 @@ install:
   - conda update -q conda
   - conda info -a
   - conda create -q -n doc-build-environment python=3.6 doctr pygments_anyscript
+  - source activate doc-build-environment
 
 before_script:
   - rvm get head || true
@@ -29,7 +30,6 @@ script:
   - set -e
   - bundle exec jekyll build
   - htmlproofer ./_site
-  - source activate doc-build-environment
   - doctr deploy --built-docs ./_site --deploy-branch-name master --deploy-repo melund/anyscript_test .;
 
 
