@@ -124,7 +124,7 @@ a reference frame using the two classes `AnyKinRotational` and `AnyKinLinear`.
 An implementaion to find the instantanous axis of rotation could be as simple
 as:
 
-```c++
+```AnyScriptDoc
    AnyKinRotational Rotational ={
      AngVelOnOff = On;
      AnyRefFrame& Ref1= .ReferenceFrame;
@@ -154,7 +154,7 @@ properties listed above and display the instantaneous axis of rotation. Here is
 a short example on how to use the class:
 
 
-```c++
+```AnyScriptDoc
 #include "path/to/InstantaneousAxisOfRotation.any"
 
 Main = {

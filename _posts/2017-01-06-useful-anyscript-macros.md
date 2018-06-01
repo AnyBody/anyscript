@@ -40,7 +40,7 @@ However, with a little ingenuity, many things can also be accomplished directly 
 
 1. First, we create two vectors of length `M` and `N` with the `iarr()` function
 
-   ```c++
+   ```AnyScriptDoc
    {% raw %}AnyInt M = 3;
    AnyInt N = 4;
    AnyVar v1 = iarr(1, M); // {1,2,3}
@@ -49,7 +49,7 @@ However, with a little ingenuity, many things can also be accomplished directly 
    
 2. Then we take the matrix product of the vectors to create a matrix. 
 
-   ```c++
+   ```AnyScriptDoc
    {% raw %}AnyVar Mat = v1'*{v1}; // {{1,2,3,4},{2,4,6,8},{3,6,9,12}} {% endraw %}
    ```
    Here we have to tranpose `v1` to make a 3x1 column maxtrix, and wrap `v2` in an extra brace to make it an 1x4 row matrix.
@@ -57,7 +57,7 @@ However, with a little ingenuity, many things can also be accomplished directly 
 
 3. Finally, we can multiply it with zero to make zero matrix
    
-   ```c++
+   ```AnyScriptDoc
    {% raw %}AnyVar zeromat = Mat*0.0; // {{0,0,0,0},{0,0,0,0},{0,0,0,0}} {% endraw %}
    ```
    
@@ -69,7 +69,7 @@ Using workarounds like this can make the code very unreadable. Luckily, we can w
 
 Code macros in AnyScript are exactly as in C and C++. They make complex expresions easier to reuse and read. The syntax is also very similar. 
 
-```c++
+```AnyScriptDoc
 {% raw %}#define ZEROS(M,N) (0.0*iarr(1,M)'*{iarr(1,N)})
 
 AnyVar mat = 3 + ZEROS(3,3);   // {{3,3,3},{3,3,3},{3,3,3}} {% endraw %}
@@ -105,7 +105,7 @@ You can find their implementatin further down:
 
 All the macros are defined in the file below. Just download the file and include it in your application:
 
-```c++
+```AnyScriptDoc
 #include "helper_macros.any"
 ```
 

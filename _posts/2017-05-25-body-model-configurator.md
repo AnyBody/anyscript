@@ -26,7 +26,7 @@ System, was to understand how to configure the human model. How to enable differ
 etc. The model is configured via AnyScript by defining switches
 which we call Body Model (BM) statements.
 
-```c++
+```AnyScriptDoc
 #define BM_ARM_RIGHT ON
 ```
 
@@ -84,7 +84,7 @@ BM-statements.
 
 The absolute path of the `.any` file has to be included in your model:
 
-```c++
+```AnyScriptDoc
 #include BM_configuration.any
 ```
 

@@ -90,14 +90,14 @@ It is hosted on GitHub, where you can [download the code.](https://github.com/An
 
 The plugin is an AnyScript class_template. It must be imported at the beginning of your model like this: 
 
-```c++
+```AnyScriptDoc
 // Include the Camera template class (somewhere before first Main)
 #include "Path/to/Video_Camera/CameraClassTemplate.any"
 ```
 
 Next we can use the Class. Just add the following 10 lines of code anywhere within `Main = {...};`
 
-```c++
+```AnyScriptDoc
   VideoLookAtCamera  MyCam (UP_DIRECTION = y) = 
   {
        CameraLookAtPoint = Main.MyModel.Femur.Knee.r;  
