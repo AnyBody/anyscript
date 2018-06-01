@@ -20,8 +20,9 @@ install:
   - conda config --add channels conda-forge # For sphinxcontrib.autoprogram
   - conda update -q conda
   - conda info -a
-  - conda create -q -n doc-build-environment python=3.6 doctr pygments_anyscript
-  - source activate doc-build-environment
+  - conda create -q -n deploy-environment python=3.6 doctr 
+  - conda create -q -n build-environment python=2.7 pygments_anyscript 
+  - source activate build-environment
 
 before_script:
   - rvm get head || true
@@ -30,6 +31,7 @@ script:
   - set -e
   - bundle exec jekyll build
   #- htmlproofer ./_site
+  - source activate deploy-environment
   - doctr deploy --built-docs ./_site --deploy-branch-name master --deploy-repo melund/melund.github.io .;
 
 
