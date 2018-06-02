@@ -181,6 +181,8 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 # Conversion
 markdown: kramdown
 highlighter: pygments
+kramdown:
+  input: GFM
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
