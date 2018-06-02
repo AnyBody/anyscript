@@ -130,6 +130,7 @@ author:
 include:
   - .htaccess
   - _pages
+  - CNAME
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
