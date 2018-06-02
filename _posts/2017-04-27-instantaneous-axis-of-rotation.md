@@ -124,7 +124,8 @@ a reference frame using the two classes `AnyKinRotational` and `AnyKinLinear`.
 An implementaion to find the instantanous axis of rotation could be as simple
 as:
 
-```AnyScriptDoc
+{% highlight AnyScriptDoc  %}
+{% raw %}
    AnyKinRotational Rotational ={
      AngVelOnOff = On;
      AnyRefFrame& Ref1= .ReferenceFrame;
@@ -140,7 +141,8 @@ as:
 
    /// The point on the rotation axis closest to ReferenceFrame origin
    AnyVec3 r_iaor = Linear.Pos + cross(Rotational.Vel, Linear.Vel)/(vnorm(Rotational.Vel)^2);
-```
+{% endraw %}
+{% endhighlight %}
 
 It is important to set `AngVelOnOff = On;` to make `AnyKinRotational` output the
 angular velocity vector. Of course this the code above is very simplified. We
@@ -153,8 +155,9 @@ We have created a custom class template that makes it easy to calculate the
 properties listed above and display the instantaneous axis of rotation. Here is
 a short example on how to use the class:
 
-{% highlight AnyScriptDoc  %}
 
+{% highlight AnyScriptDoc  %}
+{% raw %}
 #include "path/to/InstantaneousAxisOfRotation.any"
 
 Main = {
@@ -162,9 +165,9 @@ Main = {
       Body1 = .Segments.Ground,
       Body2 = .Segments.Ball
   ) = {   };
-
+  
+{% endraw %}
 {% endhighlight %}
-
 That is all it takes. Here a how it looks for few very simple models:
 
 <figure class="half">
