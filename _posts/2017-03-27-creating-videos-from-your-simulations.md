@@ -90,14 +90,15 @@ It is hosted on GitHub, where you can [download the code.](https://github.com/An
 
 The plugin is an AnyScript class_template. It must be imported at the beginning of your model like this: 
 
-```AnyScriptDoc
+{% highlight AnyScriptDoc  %}
 // Include the Camera template class (somewhere before first Main)
 #include "Path/to/Video_Camera/CameraClassTemplate.any"
-```
+{% endhighlight %}
 
 Next we can use the Class. Just add the following 10 lines of code anywhere within `Main = {...};`
 
-```AnyScriptDoc
+{% highlight AnyScriptDoc  %}
+{% raw %}
   VideoLookAtCamera  MyCam (UP_DIRECTION = y) = 
   {
        CameraLookAtPoint = Main.MyModel.Femur.Knee.r;  
@@ -110,7 +111,8 @@ Next we can use the Class. Just add the following 10 lines of code anywhere with
           AnyOperation &ref = Main.MyStudy.Kinematics;
        };
   };
-```
+{% endraw %}
+{% endhighlight  %}
 
 The `UP_DIRECTION = y` argument defines how the camera is rotated. The meaning of the the different settings are summerized below: 
 

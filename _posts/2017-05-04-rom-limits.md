@@ -33,7 +33,8 @@ Add `#include "../path/to/RangeOfMotionLimits_template.any"` in the beginning
 of your main file. Then create the `RangeOfMotionLimits` class inside Main after 
 the human model is included in the model:
 
-```c#
+{% highlight AnyScriptDoc  %}
+{% raw %}
 #include "../path/to/RangeOfMotionLimits_template.any"
 
 Main = {
@@ -56,16 +57,20 @@ Main = {
       Limits.Right.ElbowPronation = {-90, 90};
    }; 
       
-```
+
+{% endraw %}
+{% endhighlight %}
 
 If some joint should not have range of motion limits, the class accepts
 arguments for disabling individual joint limits:
 
-```
+{% highlight AnyScriptDoc  %}
+{% raw %}
   RangeOfMotionLimits RoMLimits(
     PELVIS_THORAX_LATERAL_BENDING = "Off"
     ... 
-```
+{% endraw %}
+{% endhighlight %}
 
 
 ### Find the code on GitHub

@@ -63,7 +63,8 @@ videos work well as an animated GIF file, and GIF files can take up a lot of spa
 But if you want to avoid the manual step, when generating the GIF file add the
 `CREATE_GIF=1` argument to the AnyScript class template:
 
-```AnyScriptDoc
+{% highlight AnyScriptDoc  %}
+{% raw %}
   VideoLookAtCamera  MyCam (UP_DIRECTION = y, CREATE_GIF = 1) = 
   {
        CameraLookAtPoint = Main.MyModel.Femur.Knee.r;  
@@ -76,7 +77,8 @@ But if you want to avoid the manual step, when generating the GIF file add the
           AnyOperation &ref = Main.MyStudy.Kinematics;
        };
   };
-```
+{% endraw %}
+{% endhighlight %}
 
 ### Find the code on GitHub
 

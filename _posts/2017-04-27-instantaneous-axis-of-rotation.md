@@ -165,9 +165,10 @@ Main = {
       Body1 = .Segments.Ground,
       Body2 = .Segments.Ball
   ) = {   };
-  
+
 {% endraw %}
 {% endhighlight %}
+
 That is all it takes. Here a how it looks for few very simple models:
 
 <figure class="half">
@@ -179,7 +180,7 @@ The code will eventually become part of the AnyBody Managed Model Repository
 (AMMR), which is shipped with the AnyBody Modeling System. But until the next
 release of the AMMR, the class template can be downloaded from GitHub.
 
-[<i class="fa fa-github"></i> Get IAOR class template](https://github.com/AnyBody/iaor){:
+[<i class="fab fa-github"></i> Get IAOR class template](https://github.com/AnyBody/iaor){:
 .btn .btn--success .btn--large}
 
 ## References:
