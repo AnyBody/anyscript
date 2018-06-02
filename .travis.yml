@@ -1,6 +1,6 @@
 language: ruby
 
-cache: bundler
+#cache: bundler
 
 
 env:
@@ -21,15 +21,15 @@ install:
   - conda create -q -n deploy-environment python=3.6 doctr 
   - conda create -q -n build-environment python=2.7 pygments_anyscript 
   - source activate build-environment
-  - gem install bundler
-  - bundle install
+  - gem install pygments.rb minimal-mistakes-jekyll jekyll
+#  - bundle install
 
 before_script:
   - rvm get head || true
 
 script:
   - set -e
-  - bundle exec jekyll build
+  - jekyll build --verbose
   #- htmlproofer --alt-ignore '/.*/' ./_site
   - source activate deploy-environment
   - doctr deploy --built-docs ./_site --deploy-branch-name master --deploy-repo melund/melund.github.io .;
