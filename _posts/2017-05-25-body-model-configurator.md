@@ -26,7 +26,7 @@ System, was to understand how to configure the human model. How to enable differ
 etc. The model is configured via AnyScript by defining switches
 which we call Body Model (BM) statements.
 
-{% hightlight AnyScriptDoc %}
+{% highlight AnyScriptDoc %}
 {% raw %}
 #define BM_ARM_RIGHT ON
 {% endraw %}
@@ -86,9 +86,9 @@ BM-statements.
 
 The absolute path of the `.any` file has to be included in your model:
 
-{% hightlight AnyScriptDoc %}
+{% highlight AnyScriptDoc %}
 #include BM_configuration.any
-{% endhightlight %}
+{% endhighlight %}
 
 Be sure to include it before the `HumanModel.any` is included. Otherwise the configuration will
 have no effect.
