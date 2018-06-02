@@ -29,7 +29,7 @@ teaser                   : "/assets/images/teaser.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "staticman" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : "staticman_v2" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -39,26 +39,12 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
-#staticman:
-#  allowedFields          : ["name", "email", "url", "message"]
-#  branch                 : "master"
-#  commitMessage          : "New comment."
-#  filename               : comment-{@timestamp}
-#  format                 : "yaml"
-#  moderation             : true
-#  name                   : "AnyScript.org"
-#  path                   : "_data/comments/{options.slug}"
-#  requiredFields         : ['name', 'email', 'message']
-#  transforms:
-#    email                : "md5"
-#  generatedFields:
-#    date:
-#      type               : "date"
-#      options:
-#        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-reCaptcha:
-  siteKey                :
-  secret                 :
+ staticman:
+   branch                 : "master"
+
+
+
+    
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : # true, false (default)
