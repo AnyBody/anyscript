@@ -23,7 +23,7 @@ description              : "A community for the users of AnyBody Modeling System
 url                      : "https://anyscript.org"
 #baseurl                  : # the subpath of your site, e.g. "/blog"
 ####repository            : "AnyBody/anybody.github.io"
-repository               : "anybody/anyscript"
+repository               : "AnyBody/anyscript"
 teaser                   : "/assets/images/teaser.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -38,8 +38,8 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
- staticman:
-   branch                 : "master"
+staticman:
+  branch                 : "master"
 
 
 
