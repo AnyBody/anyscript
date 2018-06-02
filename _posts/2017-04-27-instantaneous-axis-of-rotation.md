@@ -153,8 +153,8 @@ We have created a custom class template that makes it easy to calculate the
 properties listed above and display the instantaneous axis of rotation. Here is
 a short example on how to use the class:
 
+{% highlight AnyScriptDoc  %}
 
-```AnyScriptDoc
 #include "path/to/InstantaneousAxisOfRotation.any"
 
 Main = {
@@ -162,7 +162,8 @@ Main = {
       Body1 = .Segments.Ground,
       Body2 = .Segments.Ball
   ) = {   };
-```
+
+{% endhighlight %}
 
 That is all it takes. Here a how it looks for few very simple models:
 

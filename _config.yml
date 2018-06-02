@@ -220,6 +220,7 @@ plugins:
   ###- jekyll-redirect-from
   - jekyll-gist
   - jekyll-feed
+  - pygments.rb
   - jemoji
 
 # mimic GitHub Pages with --safe
@@ -231,6 +232,7 @@ whitelist:
   ###- jekyll-redirect-from
   - jekyll-gist
   - jekyll-feed
+  - pygments.rb
   - jemoji
 
 
