@@ -6,7 +6,7 @@ language: ruby
 env:
   global:
     # Doctr deploy key for melund/melund.github.io
-    - secure: "qOyWIVnt0ljrbGSiJ6c3kaND2Mle5gFUw+1bOSdjU/+QX/fqmRKNCAzxAoEBQ9kzJsoKZyDGOpjC4ru71xqKqvjTSHyJmmXB307/vG18xr9UNbPYfG0WePJGsYpmrT4i73JIZYoQaIfFNBukbXswOqvILjvy/9DBRTmDzzD9dGrllEs5LrapraWuPCSrB9DfDSMHFYSnGq62bMiS7lO0X2wUvyoiMLyNNKoO+t4n+wIqulbEv6iy0nOdb+XTNnT7S18HtcscMZiHu7y4AYsG0G9GU+W9NOam2mQWcWfkiUDjI77g3yjCyUzPrpz1lBI98k5HojCuxtzz5zaQYfKbg8GFM9Furd5XDoQnT24sEmVa1Yd+9yDECBCCSeFc+DF0gCTmnTBdWApN5X0JpMDebrJEu2BAh01I/xbjiWLFOVT+xCmS2uCutiuSH2H9Obr9mIb0txdMWyCCN3svj8oZfndMF+9HEl1BWJ6zR83bpNSMwy3nkGN+Z1FZqbXrTG/T5Vwi4f81uc8YlOKmPzxRsmXrV1LvSqmV8POGeF6bu79UN29B2TISeXizlUXjz9YCPhsj+FlLtjo2QUrvFwS2tXac8v4Gw6nIkJt+eJqMHFp7R+mGJ7Cbr2VAcS86JdiNthGZUGpwhIGH+kXDjq9MCx/t8h1XY4iihLVBomDWfKQ="
+    - secure: "QS0FM3Ujfo8BZkLKFzj77zqMNrdcBI8E/QKm9rG28fQxow5dXl1jNwpwha7D+y+I5qwb8fntVFPJsg4ibW2YROtICMZ0srFZejCorDEUey6aZOPsNrhVvuo3ZJVd1VNLUosz1M1gT2xnkCTQvrXMCzec4tgPJ0WsIUu4m9KjIv5OZ0PvIZ0vFHjgsmKwHLp3egGlM0vmcvOOdov3+ukT2m7BcabD2iIezsqAzC/Kb1oR0WVYC27q0b+afponJS+u5NtopFwKBWGxb9ssc/d2G7zE7qPTf8GewJfKzDW0laKwUcMpUEfzJzf2/IoIVhsTQ+K1ANH0O+dsZKOzeTeUeR8r7gb5mGKnlbXF+q2U+S2ubQdbjAxPp2ksAGqSKhzo+wyxe0mYu9y+xC6qiY/+ZanqcdCdj7rdW9XGYNp6Kfvbp8Dv+/1JXVz3KlTTy8XYzLvt+TVqQD69B7T7wkv7VL0RYD+f6+JWsI69pnyItt2BRPxr4JsG9qUr9dVyhbfKW9PMdDatFmcvn8z7Sk68vyJN3AnyVhtLbEsRKrgud/pW43VJB2eibAJTSzjbSvmpXgFA+wXPRJPcBuco5kU5adV6TvB135EsiZdq2f5vxSuUBHCpX1t+9okABcbnbZOQZ1H3dsCTmiJNdburcFNSjXtmNWWXrfAZgAIMCahxz0Y="
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
 install:
@@ -32,7 +32,7 @@ script:
   - jekyll build --verbose
   #- htmlproofer --alt-ignore '/.*/' ./_site
   - source activate deploy-environment
-  - doctr deploy --built-docs ./_site --deploy-branch-name master --deploy-repo melund/melund.github.io .;
+  - doctr deploy --built-docs ./_site --deploy-branch-name master --deploy-repo AnyBody/anybody.github.io .;
 
 
 sudo: false # route your build to the container-based infrastructure for a faster build

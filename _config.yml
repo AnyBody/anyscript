@@ -20,11 +20,10 @@ title                    : "AnyScript Community"
 title_separator          : "-"
 name                     : "Morten Enemark Lund"
 description              : "A community for the users of AnyBody Modeling System and the AnyScript language."
-####url                      : "https://anyscript.org"
-url                      : "https://melund.github.io"
+url                      : "https://anyscript.org"
 #baseurl                  : # the subpath of your site, e.g. "/blog"
 ####repository            : "AnyBody/anybody.github.io"
-repository               : "melund/anyscript2"
+repository               : "anybody/anyscript"
 teaser                   : "/assets/images/teaser.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
