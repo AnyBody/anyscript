@@ -22,13 +22,12 @@ name                     : "Morten Enemark Lund"
 description              : "A community for the users of AnyBody Modeling System and the AnyScript language."
 url                      : "https://anyscript.org"
 #baseurl                  : # the subpath of your site, e.g. "/blog"
-####repository            : "AnyBody/anybody.github.io"
 repository               : "AnyBody/anyscript"
 teaser                   : "/assets/images/teaser.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "staticman_v2" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : "staticman_v2"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -40,8 +39,9 @@ comments:
     colorscheme          : # "light" (default), "dark"
 staticman:
   branch                 : "master"
-
-
+reCaptcha:
+  siteKey                : "6Lfw4lwUAAAAAGl9_h1wU0-i0njA9phbqKKLLyT-"
+  secret                 : "CvXjG82RdqGEzzECv+5bKU8y7kpkZ+WdKBLXu8rWnQTRWlTl7MuhndFdnW1D6N2qTiu3lqu36uAd9erIUV5DXoRpwRVxsEnXb1tEPrI5ltlM2IEL+j27NsFLIBUo9q8HzVOfLGSDPmJvbme/3EpHNF7qHk5Z3j8Yj+LID2YD/X4="
 
     
 atom_feed:
@@ -58,7 +58,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-####google_site_verification : "Gads1dEJfrM11RlSRBUKWHHjKWkf_JfNOC1Deq7LaF0"
+google_site_verification : "Gads1dEJfrM11RlSRBUKWHHjKWkf_JfNOC1Deq7LaF0"
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
@@ -85,8 +85,7 @@ social:
 
 # Analytics
 analytics:
-  ###provider               : "google" # false (default), "google", "google-universal", "custom"
-  provider               : false
+  provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          : "UA-201751-2"
     anonymize_ip         : # true, false (default)
@@ -196,7 +195,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Copenhagen # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
