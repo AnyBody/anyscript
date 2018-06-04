@@ -134,8 +134,7 @@ Every pull request is automatically tested, to ensure that Sphinx builds the
 tutorials without errors. This done using [Travis
 CI](https://en.wikipedia.org/wiki/Travis_CI) 
 
-- See status of the Travis CI build: [![Build
-  Status](https://travis-ci.org/AnyBody/anybody-tutorial.svg?branch=master)](https://travis-ci.org/AnyBody/anybody-tutorial).
+- See status of the Travis CI build: [![Build Status](https://travis-ci.org/AnyBody/anybody-tutorial.svg?branch=master)](https://travis-ci.org/AnyBody/anybody-tutorial).
 
 Once a change is accepted and merged into the repository the script also
 automatically deploys the tutorial web page.
