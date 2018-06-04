@@ -130,6 +130,7 @@ include:
   - .htaccess
   - _pages
   - CNAME
+  - .nojekyll
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
