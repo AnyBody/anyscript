@@ -51,7 +51,7 @@ If you have never done musculoskeletal modeling with the [AnyBody Modeling Syste
 
 There are different ways to get the AnyBody Managed Model Repository (AMMR).
 
-### Bundled with the AnyBody Modeling System (Recommended)
+### From the AnyBody Modeling System (Recommended)
 
 The AMMR comes bundled with the [AnyBody Modeling System](https://www.anybodytech.com/software/ams/).
 This the recommended way to install the AMMR, to ensure compatibility between AMMR and the AnyBody Modeling System. 
@@ -66,9 +66,8 @@ All versions of the AnyBody Managed Model Repository are archived with a DOI. Th
 citing the AMMR, and the DOI's are issued by [zenodo.org](https://zenodo.org/), which is an
 European Open Science platform hosted at CERN.
 
-You can [download all archived versions](https://doi.org/10.5281/zenodo.1250764) of the AMMR from
-[zenodo.org/communities/anybody](https://zenodo.org/communities/anybody). 
-
+You can [download all archived versions](https://doi.org/10.5281/zenodo.1250764) of the AMMR from the
+[AnyBody community on Zenodo](https://zenodo.org/communities/anybody). 
 
 ### Development version of the AMMR
 
