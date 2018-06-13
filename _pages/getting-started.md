@@ -2,6 +2,8 @@
 title: "Getting Started"
 layout: single
 permalink: /getting-started/
+toc: true
+
 
 gallery:
   - url: https://youtu.be/6-KvBjEe5kA?list=PLFfwPdNH_Wt3lgwBLONX1Wyr31ZClPCBg
