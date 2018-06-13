@@ -45,11 +45,13 @@ gallery:
 If you have never done musculoskeletal modeling with the [AnyBody Modeling System (AMS)](http://anybodytech.com/) check out the series of short introductory videos below. 
 {: .notice--primary}
 
-## How to get the AnyBody Managed Model Repository (AMMR)
+## How to get the AMMR?
 
-### From the AnyBody Modeling System (Recommended)
+There are different ways to get the AnyBody Managed Model Repository (AMMR).
 
-The AnyBody Model Repository (AMMR) comes bundled with the [AnyBody Modeling System](https://www.anybodytech.com/software/ams/).
+### Bundled with the AnyBody Modeling System (Recommended)
+
+The AMMR comes bundled with the [AnyBody Modeling System](https://www.anybodytech.com/software/ams/).
 This the recommended way to install the AMMR, to ensure compatibility between AMMR and the AnyBody Modeling System. 
 
 **See also:** The [detailed guide](https://anyscript.org/ammr-doc/ammr_installation.html) on how install 
@@ -62,17 +64,17 @@ All versions of the AnyBody Managed Model Repository are archived with a DOI. Th
 citing the AMMR, and the DOI's are issued by [zenodo.org](https://zenodo.org/), which is an
 European Open Science platform hosted at CERN.
 
-You can [download all arhcived versions](https://doi.org/10.5281/zenodo.1250764) of the AMMR from
+You can [download all archived versions](https://doi.org/10.5281/zenodo.1250764) of the AMMR from
 [zenodo.org/communities/anybody](https://zenodo.org/communities/anybody). 
 
 
 ### Development version of the AMMR
 
-{::comment} The AMMR development version is available on GitHub at
+{% comment %} The AMMR development version is available on GitHub at
 [github.com/AnyBody/AMMR](https://gihub.com/AnyBody/AMMR). Contributions and
 pull requests are welcome
 
-The AMMR repository on GitHub is only a mirror of the `main` branch.{:/comment}
+The AMMR repository on GitHub is only a mirror of the `main` branch.{% endcomment %}
 Development takes place in a closed source-controlled repository to protect
 academic contributors who also often need to publish their models before
 release. Access to the closed repository is given on request.
