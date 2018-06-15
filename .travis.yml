@@ -29,7 +29,7 @@ before_script:
 
 script:
   - set -e
-  - JEKYLL_ENV=production jekyll build
+  - JEKYLL_ENV=production jekyll build --verbose
   #- htmlproofer --alt-ignore '/.*/' ./_site
   - source activate deploy-environment
   - doctr deploy --built-docs ./_site --deploy-branch-name master --deploy-repo AnyBody/anybody.github.io .;
