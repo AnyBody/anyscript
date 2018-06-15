@@ -73,12 +73,12 @@ You can [download all archived versions](https://doi.org/10.5281/zenodo.1250764)
 
 {% comment %} The AMMR development version is available on GitHub at
 [github.com/AnyBody/AMMR](https://gihub.com/AnyBody/AMMR). Contributions and
-pull requests are welcome
+pull requests are welcome.
 
 The AMMR repository on GitHub is only a mirror of the `main` branch.{% endcomment %}
 Development takes place in a closed source-controlled repository to protect
 academic contributors who also often need to publish their models before
-release. Access to the closed repository is given on request.
+release. Access to the closed repository is usually given on request.
 
 
 ## Other resources 
