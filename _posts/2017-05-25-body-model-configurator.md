@@ -15,14 +15,8 @@ tags:
 ---
 
 
-Graphical user interfaces (GUIs) enables easy and intuitive interaction between
-users and computer software. But GUIs may also hamper the flexibility and make
-the software less powerful. Hence, many powerful software tools are based on
-scripts, text and code. This is also the case of the AnyBody Modeling System.
-AnyScript is the language in which models are constructed.
-
-One of the first things I also did when starting to use the AnyBody Modeling
-System, was to understand how to configure the human model. How to enable different body parts and how to set the available options for muscles, ligaments
+One of the first things I did when starting to use the AnyBody Modeling
+System, was to understand how to configure the human model. This means enabling and disabling different body parts and setting up the available options for muscles, ligaments
 etc. The model is configured via AnyScript by defining switches
 which we call Body Model (BM) statements.
 
@@ -34,12 +28,14 @@ which we call Body Model (BM) statements.
 
 Wouldn’t it be nice to configure the model by having some buttons and
 instantaneous visual feedback as well? That is what I thought! Therefore, I have
-developed a software which provides a GUI for configuring the
-Body Model in a more friendly manner and without trying to give up the
-flexibility of AnyScript.
+developed a software which provides a graphical user interface (GUI) for configuring the
+Body Model in a more friendly manner but without trying to give up the
+flexibility of AnyScript. It has in target both beginner AMS users, who have little to no experience using
+AnyScript, and advanced AMS users who are looking for a tool that makes the body configuration
+process faster.
 
 {% capture BM_Plugin_Demo %}
-![BM_Plugin_Demo]({{ "/assets/images/posts/BM_Plugin_demo.gif" | absolute_url }})
+![BM_Plugin_Demo]({{ "/assets/images/posts/BM_DEMO.gif" | absolute_url }})
 {% endcapture %}
 
 <figure>
