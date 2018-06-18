@@ -19,15 +19,13 @@ musculoskeletal simulations with a single click.
 [<i class="fa fa-download"></i> Download on GitHub](https://github.com/AnyBody/video-recorder){: .btn .btn--success .btn--large}
 
 {% capture now_in_ammr %}
-**Edit:** The template is now included with the AMMR, and doesn't need to be downloaded separately.
-
-Include it like this:
+**Notice:** You can now find the template directly in the AMMR. Include it like this:
 {% highlight AnyScriptDoc  %}
 #include "<ANYBODY_PATH_MODELUTILS>/Video/CameraClassTemplate.any"
 {% endhighlight %}
 {% endcapture %}
 
-<div class="notice--success">
+<div class="notice--warning">
   {{ now_in_ammr | markdownify }}
 </div>
 
