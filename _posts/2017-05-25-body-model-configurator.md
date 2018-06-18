@@ -35,7 +35,7 @@ AnyScript, and advanced AMS users who are looking for a tool that makes the body
 process faster.
 
 {% capture BM_Plugin_Demo %}
-![BM_Plugin_Demo]({{ "/assets/images/posts/BM_DEMO.gif" | absolute_url }})
+![BM_Plugin_Demo]({{ "/assets/images/posts/bm_config_bmdemo.gif" | absolute_url }})
 {% endcapture %}
 
 <figure>
