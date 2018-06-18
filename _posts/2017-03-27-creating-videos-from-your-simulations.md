@@ -4,17 +4,30 @@ excerpt: "In this post you will see some manual and automatic techniques to crea
 modified: 2017-03-27T09:55:10+01:00
 author: mel
 header:
-  teaser: "assets/images/posts/video_post_teaser.png"
+  video:
+    id: ofPjGwc4FY8
+    provider: youtube
 categories:
   - Tips-n-Tricks
 tags: 
   - Creating Videos
 ---
 
-In this post, I will show a new AnyScript plugin to create awesome videos of your
+In this post, I will show a new AnyScript template to create awesome videos of your
 musculoskeletal simulations with a single click.
 
 [<i class="fa fa-download"></i> Download on GitHub](https://github.com/AnyBody/video-recorder){: .btn .btn--success .btn--large}
+
+{% capture now_in_ammr %}
+**Notice:** You can now find the template directly in the AMMR. Include it like this:
+{% highlight AnyScriptDoc  %}
+#include "<ANYBODY_PATH_MODELUTILS>/Video/CameraClassTemplate.any"
+{% endhighlight %}
+{% endcapture %}
+
+<div class="notice--warning">
+  {{ now_in_ammr | markdownify }}
+</div>
 
 Previously, I often spent hours creating videos for presentations, etc.. Now it
 takes me 10 minutes. Besides being easy to use the plugin also supports somewhat
@@ -172,5 +185,3 @@ This can of course be customized as well.
 The AnyScript template is [hosted on GitHub](https://github.com/AnyBody/video-recorder),
 where you can also find a few examples that shows how it works. As well as documentation on the
 `class_template` and the options which are available.
-
-{% include video id="ofPjGwc4FY8" provider="youtube" %}
