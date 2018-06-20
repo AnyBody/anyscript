@@ -54,8 +54,8 @@ In the remainder of this post I will show you what the plugin is able of doing a
 
 BM-Plugin comes integrated with AMMR v2.2(???) and it is available to use in AMS starting with version v7.2(???). All you have to do is to make sure that
 you have these versions or later available on your computer. You can find more information about how to get the latest AMMR 
-[here](https://anyscript.org/getting-started/). Once you make sure that you have the latest version of AMS and AMMR installed,
-load your model which contains the `HumanModel`:
+[here](https://anyscript.org/getting-started/). Once you have everything ready,
+load your model containing the `HumanModel`:
 
 {% highlight AnyScriptDoc %}
 {% raw %}
@@ -81,7 +81,7 @@ to adjust the configuration of different body parts while providing visual
 feedback if available. These tabs are: `Body`, `Legs`, `Arms`, `Trunk` and
 `Mannequin Drivers`. Once the desired configuration is set, you can load it in
 AMS by clicking `Apply` or `OK`. The difference is that by clicking `Apply`
-the Plugin will stay open for you to configure the model further. When `OK` is clicked, the configuration is saved in a history file which is available in the `Apply History` drop menu, next to the `Apply` button. It is therefore possible to load a previous configuration of the model.
+the Plugin will stay open for you to configure the model further. When `OK` is clicked, the configuration is saved in a history file which is available in the `Apply History` drop menu, next to the `Apply` button. It is therefore possible to load a previous configurations of the model.
 
 {% capture BM_Plugin_Tabs %}
 ![BM_Plugin_Tabs]({{ "/assets/images/posts/bm_config_tabs.gif" | absolute_url }})
@@ -94,11 +94,11 @@ the Plugin will stay open for you to configure the model further. When `OK` is c
 
 Of course, not all BM statements have a visual representation in the AMS Model View or are directly related to physical body parts. Therefore, the BM statements which were not classified in the tabs mentioned before can be found and modified in the `Advanced` tab. 
 
-By having the presented overview of the Plugin, you should be ready to use it now. However, if you are interested in finding some details about how it works behind scenes too, continue reading.
+By having the presented overview of the Plugin, you should be ready to use it now. However, if you are interested in finding some details about how it works behind scenes the too, continue reading.
 
 ## How BM-Plugin works
 
-As stated in the introduction, the BM-Plugin is dependent on the `HumanModel`. Therefore, every time you start the plugin, it will check your `.main.any` file to determine if it is included in your own model. If it is, the Plugin will create a new file named `BodyModelConfiguration.any` inside the `Model` folder next to your `.main.any` file. The plugin will then ask you if you allow it to include this file inside the main file (I recommend that you do):
+As stated in the introduction, the BM-Plugin is dependent on the `HumanModel`. Therefore, every time you start the plugin, it will check your `.main.any` file to determine if it is included. If it is, the Plugin will create a new file named `BodyModelConfiguration.any` inside the `Model` folder next to your `.main.any` file. The plugin will then ask you if you allow it to include this file inside the main file (I recommend that you do):
 
 {% highlight AnyScriptDoc %}
 {% raw %}
@@ -116,7 +116,7 @@ The Configuration file can be seen inside the plugin under the `Script File` tab
 
 <figure>
   {{ BM_Plugin_Script | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>The 'Body', 'Legs', 'Arms', 'Trunk' and 'Mannequin Drivers' tabs.</figcaption>
+  <figcaption>The `Script File` tab.</figcaption>
 </figure>
 
 
