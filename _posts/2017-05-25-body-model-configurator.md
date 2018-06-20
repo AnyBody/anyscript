@@ -63,7 +63,7 @@ load your model which contains the `HumanModel`:
 
 and if everything is fine, you should be able to start the BM-Plugin by clicking the button marked in the figure below:
 
-{% capture BM_Plugin_Demo %}
+{% capture BM_Plugin_1 %}
 ![BM_Plugin_1]({{ "/assets/images/posts/bm_config_image1.png" | absolute_url }})
 {% endcapture %}
 
