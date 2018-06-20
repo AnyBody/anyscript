@@ -46,13 +46,15 @@ AnyScript, the BM Plugin will help you a lot in getting started with it and to u
 If you are an advanced AMS user, you will find configuring your human model much easier and much faster by using the plugin. And don't worry
 about loosing your freedom with AnyScript! BM Plugin is not meant to replace it, it is meant to write it for you, so it saves you time.
 
-In the remainder of this post I will show you what the plugin is able of and a little bit of technicalities.
+In the remainder of this post I will show you what the plugin is able of doing and some technicalities.
+
+
 
 ## How to get and use BM-Plugin
 
-BM-Plugin comes integrated with AMMR v2.2(???) and it is available starting with AMS v7.2(???). All you have to do is to make sure that
+BM-Plugin comes integrated with AMMR v2.2(???) and it is available to use in AMS starting with version v7.2(???). All you have to do is to make sure that
 you have these versions or later available on your computer. You can find more information about how to get the latest AMMR 
-[here](https://anyscript.org/editors/anyscript-in-vscode/). Once you make sure that you have the latest version of AMS and AMMR installed,
+[here](https://anyscript.org/getting-started/). Once you make sure that you have the latest version of AMS and AMMR installed,
 load your model which contains the `HumanModel`:
 
 {% highlight AnyScriptDoc %}
@@ -72,99 +74,53 @@ and if everything is fine, you should be able to start the BM-Plugin by clicking
   <figcaption>Load your model and start the plugin by only clicking a button.</figcaption>
 </figure>
 
+## Using BM-Plugin
 
-To use the BM-Plugin, you must have installed the Anaconda Python distribution
-which you can find it [here](https://www.continuum.io/downloads). Make sure to
-install python 3.6. Open an Anaconda terminal and execute:
+The BM-Plugin is structured in a number of tabs, each of them giving you options
+to adjust the configuration of different body parts while providing visual
+feedback if available. These tabs are: `Body`, `Legs`, `Arms`, `Trunk` and
+`Mannequin Drivers`. Once the desired configuration is set, you can load it in
+AMS by clicking `Apply` or `OK`. The difference is that by clicking `Apply`
+the Plugin will stay open for you to configure the model further. When `OK` is clicked, the configuration is saved in a history file which is available in the `Apply History` drop menu, next to the `Apply` button. It is therefore possible to load a previous configuration of the model.
 
-```bash
-conda install --channel anybody bm-plugin
-```
-
-If the command is not working, you might need to run the terminal as Administrator.
-After the installation you can find the application in the Windows start menu. 
-
-`Start->AnyBody plugins->Body Model Configurator`
-
-The Plugin modifies an AnyScript (`.any`) file and stores the configuration as 
-BM statements inside it. Once you open the plugin, it will ask you
-to choose an existing `.any` file. You can 
-also use the tool on your existing model. Just choose the file where you have your
-BM-statements.
-
-{% capture Any_file %}
-![Any_file]({{ "/assets/images/posts/Any_file.JPG" | absolute_url }})
+{% capture BM_Plugin_Tabs %}
+![BM_Plugin_Tabs]({{ "/assets/images/posts/bm_config_tabs.gif" | absolute_url }})
 {% endcapture %}
 
 <figure>
-  {{ Any_file | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>Choose the .any file with which the plugin will interact.</figcaption>
+  {{ BM_Plugin_Tabs | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>The 'Body', 'Legs', 'Arms', 'Trunk' and 'Mannequin Drivers' tabs.</figcaption>
 </figure>
 
-The absolute path of the `.any` file has to be included in your model:
+Of course, not all BM statements have a visual representation in the AMS Model View or are directly related to physical body parts. Therefore, the BM statements which were not classified in the tabs mentioned before can be found and modified in the `Advanced` tab. 
+
+By having the presented overview of the Plugin, you should be ready to use it now. However, if you are interested in finding some details about how it works behind scenes too, continue reading.
+
+## How BM-Plugin works
+
+As stated in the introduction, the BM-Plugin is dependent on the `HumanModel`. Therefore, every time you start the plugin, it will check your `.main.any` file to determine if it is included in your own model. If it is, the Plugin will create a new file named `BodyModelConfiguration.any` inside the `Model` folder next to your `.main.any` file. The plugin will then ask you if you allow it to include this file inside the main file (I recommend that you do):
 
 {% highlight AnyScriptDoc %}
-#include BM_configuration.any
+{% raw %}
+#include "Model/BodyModelConfiguration.any"
+{% endraw %}
 {% endhighlight %}
 
-Be sure to include it before the `HumanModel.any` is included. Otherwise the configuration will
-have no effect.
-{: .notice--warning}
+The plugin will store and modify all the needed BM statements for your model inside the `BodyModelConfiguration.any` file. I encourage you to use this file to store the BM statements regardless if you use the plugin frequently or not. You will also find that most of the examples using the `HumanModel` have this structure implemented and they are ready to be configured using the BM-Plugin.
 
-{% capture Include_Plugin %}
-![Include_Plugin]({{ "/assets/images/posts/Include_Plugin.JPG" | absolute_url }})
+The Configuration file can be seen inside the plugin under the `Script File` tab:
+
+{% capture BM_Plugin_Script %}
+![BM_Plugin_Script]({{ "/assets/images/posts/bm_config_script.png" | absolute_url }})
 {% endcapture %}
 
 <figure>
-  {{ Include_Plugin | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>Include the .any file in AnyBody</figcaption>
+  {{ BM_Plugin_Script | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>The 'Body', 'Legs', 'Arms', 'Trunk' and 'Mannequin Drivers' tabs.</figcaption>
 </figure>
 
-The plugin modifies only the BM statements in the .any file, and shouldn't mess
-with formatting of the file. Therefore, you may have other stuff in it. Any new
-BM statements are added at the end of the file, but are free to manually format
-the file.
 
-## Usage
 
-As I said before, the plugin is very easy to use and it offers an alternative to
-writing AnyScript for configuring the Body Model. You will see that there is a
-level of interdependency between different available options. So the
-combinations of adjustments which cannot be compiled by the AnyBody Modeling
-System will not be possible to select in the Plugin. However, in the Advanced tab
-you are allowed to choose any combination of BM
-statements you desire. Descriptions for each BM statement and for their available options are provided in this tab.
-
-{% capture Adv_tab %}
-![Adv_tab]({{ "/assets/images/posts/Adv_tab.JPG" | absolute_url }})
-{% endcapture %}
-
-<figure>
-  {{ Adv_tab | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>The advanced tab of the plugin.</figcaption>
-</figure>
-
-The grid in the Advanced tab is populated using the `.xml` file located in AMMR
-where all the BM statements can be found. Every time you run the plugin, it
-will check that `.xml` file for any changes and it will update the grid in
-advanced tab with any new BM statements it finds. The `.xml` file is in the installation
-files of the plugin.
-
-## Further development:
-
-To make this plugin as attractive as possible, a number of new cool things will
-be added in the feature and I am already working on them:
-
-*	Connection with AnyBody: in order to give the possibility of opening the
-plugin directly from AnyBody, to load the model by pressing a button in the
-plugin and to automatically add the include line where it has to be in the Body
-Model’s script;
-
-*	Add control over Body parameters like Weight and Height (these are not BM statements);
-
-*	Integrate the plugin with AMMR to be up to date with the latest BM statements;
-
-*	Add the possibility for the user to add their own GUI elements linked to custom BM statements.
 
 Now I think you know enough about the plugin to try it yourself, so what are you waiting for?
 
