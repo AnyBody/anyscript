@@ -44,12 +44,11 @@ Notepad++ was my favorite text editor for many years and I often still use it.
 It is fast and works well on Windows. To enable AnyScript support in Notepad++
 you need to the install AnyScript language extension.
 
-You can find the extension on the [AnyScript wiki
-site](https://github.com/AnyBody/support/wiki/Using-Notepad---to-edit-AnyScipt),
+You can find the extension on [GitHub](https://github.com/AnyBody/notepad-plus-plus-anyscript),
 or download it here directly:
 
 [<i class="fa fa-download"></i> Download AnyScript
-Notepad++](https://raw.githubusercontent.com/AnyBody/support/master/Wiki_Files/Using_Notepad/AnyScript.xml){:
+Notepad++](https://github.com/AnyBody/notepad-plus-plus-anyscript/raw/master/anyscript.xml){:
 .btn .btn--success .btn--large}
 
 Save the file `AnyScript.xml` to your computer. Open Notepad++ and select the menu: "Language"->"Define your language" and click import...
