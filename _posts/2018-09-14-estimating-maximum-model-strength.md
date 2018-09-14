@@ -5,6 +5,7 @@ author: bkj
 modified: 2018-09-14T14:24:32+02:00
 sitemap: false
 hidden: true
+math: true
 header:
   teaser: "assets/images/posts/max-strength_teaser.png"
 categories:
@@ -21,7 +22,7 @@ strength of a simple 2D arm model in various postures. The concepts
 presented can of course be extended to models involving the full body
 model or parts of it.
 
-<figure>
+<figure class="align-right" style="width: 300px">
   <img src="/assets/images/posts/max-strength_simple-arm.png" alt="Model of a simple arm">
   <figcaption>Fig. 1</figcaption>
 </figure>
@@ -80,7 +81,7 @@ example it does 100 steps where it starts at -200 N and stops at 300 N. This
 enables us to plot the $mmact$ as a function of the load. By running the parameter
 study for all four load scenarios we end up with a graph as seen in fig.2.
 
-<figure>
+<figure style="width: 80%">
   <img src="/assets/images/posts/max-strength_max_act.png" alt="Max activity as function of load">
   <figcaption>Fig. 2: Max activity if a function of external load</figcaption>
 </figure>
