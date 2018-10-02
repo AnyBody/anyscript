@@ -37,7 +37,8 @@ strength independent of the movement, we therefore set up four load
 scenarios to mimic a flexion, extension, push, and pull movement.
 Since we want to investigate maximum strength, we need to be sure 
 that the muscles are recruited appropriately. This is
-done by switching to the `MinMax_Strict` muscle recruiter.
+done by switching to the `MinMax_Strict` muscle recruiter. For more information
+on muscle recruitment in the Anybody Modelling software, se [this tutorial](https://anyscript.org/tutorials/MuscleRecruitment/index.html)
 
 
 The first step in finding the default maximum strength for a posture is to know the
@@ -76,7 +77,7 @@ study for all four load scenarios we end up with a graph as seen in fig. 2.
 
 <figure style="width: 80%">
   <img src="/assets/images/posts/Concentric_paramStudy.png" alt="Max activity as function of load">
-  <figcaption>Fig. 2: Max muscle activity as a function of the load applied</figcaption>
+  <figcaption>Fig. 2: Max muscle activity as a function of the load applied. Dashed line indicates $mmact = 1$.</figcaption>
 </figure>
 
 We can see that for very low loads there might be other factors than the applied load
@@ -103,8 +104,8 @@ $$\begin{equation} \label{eq:2} a = \frac{(y_{2} - y_{1})}{(x_{2} - x_{1})} \end
 
 Now that we know the coordinates of two points and the slope, we can
 start figuring out what the load is at $mmact = 1$. For this
-we again look at equation $\ref{eq:2}$, only this time we know the slope, the point 
-$\left( x_{2},y_{2} \right$, and the $y_{1}$ coordinate,
+we again look at equation $\ref{eq:2}$, only this time we know the slope, the point
+$( x_{2},y_{2}$, and the $y_{1}$ coordinate,
 which should be equal to 1. We are therefore interested in finding
 $x_{1}$. We rearrange equation $\ref{eq:2}$, into:
 
@@ -113,11 +114,18 @@ $$\begin{equation} \label{eq:3} x_{1} = \frac{1}{a} - \frac{y_{1}}{a} + x_{2} \e
 
 This allows us to evaluate what is the maximal load $x_{1}$ that
 the model can support in a given posture. To check our results, we can
-calculate the maximal strength using equation $\ref{eq:3}$ and try and implement
-that load in our flexion model. As anticipated the $mmact$ reached 0.996, and the
-same holds across all four load scenarios.
+calculate the maximal strength for our four scenarios using equation $\ref{eq:3}$ and try and implement
+the output load in our models. Table 1. shows the calculated default strengths of the models, and the $mmact$
+when applying these loads.
 
+| Movement  | Default Strength (N) | New MMACT |
+|-----------|----------------------|-----------|
+| Extension | 77.08                | 1.04      |
+| Flexion   | 58.93                | 0.99      |
+| Push      | 83.09                | 1.00      |
+| Pull      | 183.80               | 1.00      |
 
+Now we can calculate the maximum load for any given posture!
 
 ### Find the code on GitHub
 
