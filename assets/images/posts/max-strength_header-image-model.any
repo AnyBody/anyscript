@@ -1,0 +1,102 @@
+#include "C:\Users\mel\Documents\AMMRs\ammr_deltoid\libdef.any"
+
+Main = {  
+  // ----------------------------------------------------------
+  // Model configuration:
+  // For more info on body model configuration options please load the model and double click on: 
+  // #path HTML_DOC "<AMMR_PATH_DOC>/bm_config/index.html"
+  // ----------------------------------------------------------
+  
+  #define BM_LEG_MODEL OFF
+  #define BM_ARM_LEFT  ON
+  #define BM_ARM_DETAILED_HAND ON
+  
+  Main.HumanModel.Mannequin.Posture.Right.GlenohumeralFlexion = 20;
+  Main.HumanModel.Mannequin.Posture.Right.GlenohumeralAbduction = 70;
+  Main.HumanModel.Mannequin.Posture.Right.GlenohumeralExternalRotation = 80;
+  Main.HumanModel.Mannequin.Posture.Right.ElbowPronation = -40;
+  
+  Main.HumanModel.Mannequin.Posture.Right.ElbowFlexion = 130;
+  
+  
+  Main.HumanModel.DefaultMannequinDrivers.PostureDriverBending.Reaction.Type = {On};
+  Main.HumanModel.DefaultMannequinDrivers.PostureDriverRotation.Reaction.Type = {On};
+  Main.HumanModel.DefaultMannequinDrivers.PostureDriverExtension.Reaction.Type = {On};
+
+  Main.DrawSettings.Muscle.Bulging = 5;
+  Main.DrawSettings.Muscle.MaxStress = 400000;
+//  Main.DrawSettings.Muscle.RGBColorScale = {0.8,0.1,0.1};
+
+
+Main.HumanModel.Mannequin.Posture.Right.WristFlexion = -40;
+Main.HumanModel.Mannequin.Posture.Right.Finger1.CMCFlexion = 90;
+Main.HumanModel.Mannequin.Posture.Right.Finger1.DIPFlexion = 80;
+Main.HumanModel.Mannequin.Posture.Right.Finger1.CMCDeviation = 10;
+
+Main.HumanModel.Mannequin.Posture.Right.Finger2 = {
+MCPFlexion = 80;
+PIPFlexion = 90;
+DIPFlexion = 30;
+};
+Main.HumanModel.Mannequin.Posture.Right.Finger3 = {
+MCPFlexion = 80;
+PIPFlexion = 90;
+DIPFlexion = 30;
+};
+Main.HumanModel.Mannequin.Posture.Right.Finger4 = {
+MCPFlexion = 80;
+PIPFlexion = 90;
+DIPFlexion = 30;
+};
+Main.HumanModel.Mannequin.Posture.Right.Finger5 = {
+MCPFlexion = 80;
+PIPFlexion = 90;
+DIPFlexion = 30;
+};
+
+
+  
+  //If you want to use your own draw settings, please outcomment the next line
+  //#path BM_DRAWSETTINGS_FILE "Model\DrawSettings.any"
+
+  // Include default human model
+  #include "<ANYBODY_PATH_BODY>\HumanModel.any"
+  
+  AnyFolder Model = {  
+    // A link to the human model
+    AnyFolder &HumanModel=.HumanModel.BodyModelWithDefaultDrivers;
+    
+    // Environment files are used to include objects surrounding human
+    #include "Model\Environment.any"   
+    
+    AnyFolder ModelEnvironmentConnection = {
+      //'JointsAndDrivers.any' file can include all kinematic constraints such as joints and drivers
+      #include "Model\JointsAndDrivers.any"
+      // Additional reactions which are required to run the inverse dynamics analysis
+      #include "Model\Reactions.any"
+    };
+  };
+  
+  AnyBodyStudy Study = {
+    
+    AnyForce3D loadR = {
+      F = {10, -60,120};
+      AnyRefFrame& ref = Main.HumanModel.BodyModel.Right.ShoulderArm.Seg.Radius.wj;
+    };
+    AnyForce3D loadL = {
+      F = {10, -60,-120};
+      AnyRefFrame& ref = Main.HumanModel.BodyModel.Left.ShoulderArm.Seg.Radius.wj;
+    };
+    
+    AnyFolder &Model = .Model;  
+    Gravity={0.0, -9.81, 0.0};
+    nStep = 11;
+    
+    // these settings are needed for adding drivers without removing the default set 
+    Kinematics.SolverType = KinSolOverDeterminate;
+    InitialConditions.SolverType = Kinematics.SolverType ;
+  };
+  
+    #include "Model\RunAppSequence.any"
+}; //Main
+
