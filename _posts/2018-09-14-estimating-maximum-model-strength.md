@@ -7,13 +7,11 @@ sitemap: false
 hidden: true
 math: true
 header:
+  teaser: "assets/images/posts/max-strength_teaser.png"
   overlay_image: /assets/images/posts/max-strength-header.jpg
-  #overlay_filter: 0.5
   actions:
     - label: "Get the example"
       url: "https://github.com/anybody/max-muscle-strength"
-header:
-  teaser: "assets/images/posts/max-strength_teaser.png"
 categories:
   - tools
 tags: 
@@ -132,7 +130,8 @@ when applying these loads.g
 | Push      | 83.09                | 1.00      |
 | Pull      | 183.80               | 1.00      |
 
-Table 1: Calculated strength and $mmact$ after applying the calculated load {:.notice}
+Table 1: Calculated strength and $mmact$ after applying the calculated load
+{:.notice}
 
 Now we can calculate the maximum load for any given posture!
 
