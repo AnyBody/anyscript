@@ -1,6 +1,6 @@
 ---
-title: "Getting the maximum strength of your model!"
-excerpt: "In this post you will see how to find the maximum strength of your model."
+title: "Calculating maximum model strength"
+excerpt: "Knowing the maximum strength of a model is valuable information. In this post we show how this can be calculated easily."
 author: bkj
 modified: 2018-09-14T14:24:32+02:00
 sitemap: false
@@ -9,6 +9,7 @@ math: true
 header:
   teaser: "assets/images/posts/max-strength_teaser.png"
   overlay_image: /assets/images/posts/max-strength-header.jpg
+  overlay_filter: 0.5
   actions:
     - label: "Get the example"
       url: "https://github.com/anybody/max-muscle-strength"
