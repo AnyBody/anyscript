@@ -7,6 +7,12 @@ sitemap: false
 hidden: true
 math: true
 header:
+  overlay_image: /assets/images/posts/max-strength-header.jpg
+  #overlay_filter: 0.5
+  actions:
+    - label: "Get the example"
+      url: "https://github.com/anybody/max-muscle-strength"
+header:
   teaser: "assets/images/posts/max-strength_teaser.png"
 categories:
   - tools
@@ -17,7 +23,7 @@ tags:
 
 When working with subject specific scaling of models, it can be a
 valuable tool to know what the strength of your model is for a given
-posture. With strength we meen the maximum permissable load that the model can carry in a given posture.
+posture. With strength we mean the maximum permissible load that the model can carry in a given posture.
 This post will show you a way of calculating the maximum
 strength of a simple 2D arm model in various postures. The concepts
 presented can of course be extended to models involving the full body
