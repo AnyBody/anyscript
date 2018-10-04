@@ -123,7 +123,7 @@ This allows us to evaluate what the maximum load $x_{1}$ is, that
 the model can support for a given posture. To check our results, we can
 calculate the maximum strength for our four scenarios using equation $\ref{eq:3}$ and try to implement
 the output load in our models. Table 1. shows the calculated strengths of the models, and the $mmact$
-when applying these loads.
+when applying these loads.g
 
 | Movement  | Strength (N)         | New MMACT |
 |-----------|----------------------|-----------|
@@ -131,6 +131,7 @@ when applying these loads.
 | Flexion   | 58.93                | 0.99      |
 | Push      | 83.09                | 1.00      |
 | Pull      | 183.80               | 1.00      |
+
 Table 1: Calculated strength and $mmact$ after applying the calculated load {:.notice}
 
 Now we can calculate the maximum load for any given posture!
