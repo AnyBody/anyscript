@@ -30,7 +30,7 @@ model or parts of it.
 
 <figure class="align-right" style="width: 300px">
   <img src="/assets/images/posts/max-strength_simple-arm.png" alt="Model of a simple arm">
-  <figcaption>Fig. 1: The simple 2D arm model used in this example</figcaption>
+  <figcaption>Fig. 1: The simple 2D arm model used in this example.</figcaption>
 </figure>
 
 For us to do so, we first need to setup an example model. The
@@ -48,7 +48,7 @@ For more information on muscle recruitment in the Anybody Modelling software, se
 
 
 The first step in finding the default maximum strength for a posture, is to know the
-relationship between load and `MaxMuscleActivity` ($mmact$). We can do this by
+relationship between load and `MaxMuscleActivity` ($m<sub>act</sub>$). We can do this by
 implementing a parameter study to investigate the $mmact$ across a spectrum of
 loads. This is done using the `AnyParamStudy` class as seen below: 
 
@@ -78,7 +78,7 @@ loads. This is done using the `AnyParamStudy` class as seen below:
 
 This study runs our model through the loads defined in the $load$ variable. So, in this
 example it does 100 steps where it starts at 0 N and stops at 250 N. This
-enables us to plot the $mmact$ as a function of the load. By running the parameter
+enables us to plot the $m_{act}$ as a function of the load. By running the parameter
 study for all four load scenarios we end up with a graph as seen in fig. 2.
 
 <figure style="width: 80%">
@@ -89,49 +89,46 @@ study for all four load scenarios we end up with a graph as seen in fig. 2.
 We can see that for very low loads there might be other factors than the applied load
 affecting the relationship. If we dwell by this fact and wonder why this
 could be, we could infer that the influence of gravity and segment mass
-could interfere with the relationship between $load$ and $mmact$. This means
-that when applying low external loads, the important factor in $mmact$ is
+could interfere with the relationship between $load$ and $m_{act}$. This means
+that when applying low external loads, the important factor in $m_{act}$ is
 the mass of the moved segments, and the gravity imposed on those
 segments. The graph also tells us that for high loads there is a linear
-relationship between load and $mmact$, and the linear part is crossing
-$mmact = 1$ for all scenarios. We can use this information to
+relationship between load and $m_{act}$, and the linear part is crossing
+$m_{act} = 1$ for all scenarios. We can use this information to
 calculate the maximum strength of the model. If we look at the equation
 for a linear function it looks like this:
 
-$$\begin{equation} \label{eq:1}  y = ax + \ b \end{equation}$$
+$$\begin{equation} \label{eq:1} m_{act}  = a * $load$ + \ b \end{equation}$$
 
-Where in this case $y$ is the mmact, $x$ is the load, $a$ is the slope of the
-function, and $b$ is the intercept with the y-axis. The slope of the
-linear part can be calculated using only two points and applying the
+Where $a$ is the slope of the function, and $b$ is the intercept with the y-axis.
+The slope of the linear part can be calculated using only two points and applying the
 equation:
 
 
-$$\begin{equation} \label{eq:2} a = \frac{(y_{2} - y_{1})}{(x_{2} - x_{1})} \end{equation}$$
+$$\begin{equation} \label{eq:2} a = \frac{(m_{act_{2}} - m_{act_{1}})}{(load_{2} - load_{1})} \end{equation}$$
 
 Now that we know the coordinates of two points and the slope, we can
-start figuring out what the load is at $mmact = 1$. For this
+start figuring out what the load is at $m_{act} = 1$. For this
 we again look at equation $\ref{eq:2}$, only this time we know the slope, the point
-$( x_{2},y_{2})$, and the $y_{1}$ coordinate,
-which should be equal to 1. We are therefore interested in finding
-$x_{1}$. We rearrange equation $\ref{eq:2}$, into:
+$(load_{1},m_{act_{1}})$, and the $m_{act}$ coordinate,
+which should be equal to 1. We are therefore interested in finding the corresponding
+$load_{max}$. We rearrange equation $\ref{eq:2}$, into:
 
 
-$$\begin{equation} \label{eq:3} x_{1} = \frac{1}{a} - \frac{y_{1}}{a} + x_{2} \end{equation}$$
+$$\begin{equation} \label{eq:3} load_{max} = \frac{1}{a} - \frac{m_{act_{1}}}{a} + load_{1} \end{equation}$$
 
-This allows us to evaluate what the maximum load $x_{1}$ is, that
+This allows us to evaluate what the maximum load $load_{max}$ is, that
 the model can support for a given posture. To check our results, we can
-calculate the maximum strength for our four scenarios using equation $\ref{eq:3}$ and try to implement
-the output load in our models. Table 1. shows the calculated strengths of the models, and the $mmact$
-when applying these loads.g
+calculate the maximum strength for our four scenarios using equation $\ref{eq:3}$ and try to implement the output load in our models. Table 1. shows the calculated strengths of the models, and the $m_{act}$ when applying the load_{max} values.
 
-| Movement  | Strength (N)         | New MMACT |
-|-----------|----------------------|-----------|
-| Extension | 77.08                | 1.04      |
-| Flexion   | 58.93                | 0.99      |
-| Push      | 83.09                | 1.00      |
-| Pull      | 183.80               | 1.00      |
+| Movement  | Load_{max} (N)   | New m_{act} |
+|-----------|------------------|-----------  |
+| Extension | 70.97891372      | 1.0         |
+| Flexion   | 78.33099967      | 1.0         |
+| Push      | 93.43104145      | 1.0         | 
+| Pull      | 113.1664796      | 1.0         |
 
-Table 1: Calculated strength and $mmact$ after applying the calculated load
+Table 1: Calculated load_{max} and new $m_{act}$ for each movement.
 {:.notice}
 
 Now we can calculate the maximum load for any given posture!
