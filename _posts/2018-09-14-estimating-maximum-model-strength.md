@@ -33,24 +33,27 @@ model or parts of it.
   <figcaption>Fig. 1: The simple 2D arm model used in this example.</figcaption>
 </figure>
 
-For us to do so, we first need to setup an example model. The
-model is a 2D arm model comprised of an upper and lower arm segment,
-attached with 8 simple muscles (fig. 1). The model is constraint to only
-allow movement in the global x and y direction. This allows us to impose
-movements which resembles flexion and extension of the shoulder and
-elbow joint. Further, we want to show a general way of calculating the
-strength independent of the movement, we therefore set up four load
-scenarios to mimic a flexion, extension, push, and pull movement.
-Since we want to investigate _maximum strength_, we need to be sure 
-that the muscles are recruited appropriately. This is
-done by switching to the `MinMax_Strict` muscle recruiter in the study section of our model. 
-For more information on muscle recruitment in the Anybody Modelling software, se [this tutorial.](https://anyscript.org/tutorials/MuscleRecruitment/index.html)
+For us to do so, we first need to setup an example model. The model is a 2D arm
+model comprised of an upper and lower arm segment, attached with 8 simple
+muscles (fig. 1). The model is constraint to only allow movement in the global x
+and y direction. This allows us to impose movements which resembles flexion and
+extension of the shoulder and elbow joint. Further, we want to show a general
+way of calculating the strength independent of the movement, we therefore set up
+four load scenarios to mimic a flexion, extension, push, and pull movement.
 
 
-The first step in finding the default maximum strength for a posture, is to know the
-relationship between load and `MaxMuscleActivity` ($m<sub>act</sub>$). We can do this by
-implementing a parameter study to investigate the $mmact$ across a spectrum of
-loads. This is done using the `AnyParamStudy` class as seen below: 
+Since we want to investigate _maximum strength_, we need to be sure that the
+muscles are recruited appropriately. This is done by switching to the
+`MinMax_Strict` muscle recruiter in the study section of our model. For more
+information on muscle recruitment in the Anybody Modelling software, se [this
+tutorial.](https://anyscript.org/tutorials/MuscleRecruitment/index.html)
+
+
+The first step in finding the default maximum strength for a posture, is to know
+the relationship between load and `MaxMuscleActivity` ( $m_{act}$ ). We
+can do this by implementing a parameter study to investigate the $mmact$ across
+a spectrum of loads. This is done using the `AnyParamStudy` class as seen below:
+
 
 
 {% highlight AnyScriptDoc  %}
@@ -92,13 +95,15 @@ could be, we could infer that the influence of gravity and segment mass
 could interfere with the relationship between $load$ and $m_{act}$. This means
 that when applying low external loads, the important factor in $m_{act}$ is
 the mass of the moved segments, and the gravity imposed on those
-segments. The graph also tells us that for high loads there is a linear
+segments. 
+
+The graphs on fig. 2 also tells us that for high loads there is a linear
 relationship between load and $m_{act}$, and the linear part is crossing
 $m_{act} = 1$ for all scenarios. We can use this information to
 calculate the maximum strength of the model. If we look at the equation
 for a linear function it looks like this:
 
-$$\begin{equation} \label{eq:1} m_{act}  = a * $load$ + \ b \end{equation}$$
+$$\begin{equation} \label{eq:1} m_{act}  = a * load + \ b \end{equation}$$
 
 Where $a$ is the slope of the function, and $b$ is the intercept with the y-axis.
 The slope of the linear part can be calculated using only two points and applying the
@@ -108,7 +113,7 @@ equation:
 $$\begin{equation} \label{eq:2} a = \frac{(m_{act_{2}} - m_{act_{1}})}{(load_{2} - load_{1})} \end{equation}$$
 
 Now that we know the coordinates of two points and the slope, we can
-start figuring out what the load is at $m_{act} = 1$. For this
+start figuring out what the load is for an activity of 1 ( $m_{act} = 1$ ). For this
 we again look at equation $\ref{eq:2}$, only this time we know the slope, the point
 $(load_{1},m_{act_{1}})$, and the $m_{act}$ coordinate,
 which should be equal to 1. We are therefore interested in finding the corresponding
@@ -119,16 +124,16 @@ $$\begin{equation} \label{eq:3} load_{max} = \frac{1}{a} - \frac{m_{act_{1}}}{a}
 
 This allows us to evaluate what the maximum load $load_{max}$ is, that
 the model can support for a given posture. To check our results, we can
-calculate the maximum strength for our four scenarios using equation $\ref{eq:3}$ and try to implement the output load in our models. Table 1. shows the calculated strengths of the models, and the $m_{act}$ when applying the load_{max} values.
+calculate the maximum strength for our four scenarios using equation $\ref{eq:3}$ and try to implement the output load in our models. Table 1. shows the calculated strengths of the models, and the $m_{act}$ when applying the $load_{max}$ values.
 
-| Movement  | Load_{max} (N)   | New m_{act} |
-|-----------|------------------|-----------  |
-| Extension | 70.97891372      | 1.0         |
-| Flexion   | 78.33099967      | 1.0         |
-| Push      | 93.43104145      | 1.0         | 
-| Pull      | 113.1664796      | 1.0         |
+| Movement  | $Load_{max}$ (N)   | New $m_{act}$ |
+|-----------|--------------------|-------------  |
+| Extension | 70.97891372        | 1.0           |
+| Flexion   | 78.33099967        | 1.0           |
+| Push      | 93.43104145        | 1.0           | 
+| Pull      | 113.1664796        | 1.0           |
 
-Table 1: Calculated load_{max} and new $m_{act}$ for each movement.
+Table 1: Calculated $load_{max}$ and new $m_{act}$ for each movement.
 {:.notice}
 
 Now we can calculate the maximum load for any given posture!
