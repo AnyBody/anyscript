@@ -2,7 +2,7 @@
 title: "Calculating maximum model strength"
 excerpt: "Knowing the maximum strength of a model is valuable information. In this post we show how this can be calculated easily."
 author: bkj
-modified: 2018-09-14T14:24:32+02:00
+modified: 2018-10-12T11:28:32+02:00
 sitemap: true
 math: true
 header:
