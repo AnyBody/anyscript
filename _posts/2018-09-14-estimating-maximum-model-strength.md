@@ -12,7 +12,7 @@ header:
   overlay_filter: 0.5
   actions:
     - label: "Get the example"
-      url: "https://github.com/anybody/max-muscle-strength"
+      url: "https://github.com/AnyBody/Calculating-maximum-model-strength"
 categories:
   - tools
 tags: 
@@ -142,4 +142,4 @@ Now we can calculate the maximum load for any given posture!
 
 The AnyScript example which shows the concept of finding the maximum
 strength is available [on
-GitHub](https://github.com/AnyBody/max-muscle-strength). 
+GitHub](https://github.com/AnyBody/Calculating-maximum-model-strength). 
