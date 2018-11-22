@@ -20,15 +20,11 @@ tags:
   - Optimization
 ---
 
-Although the AnyBody Modeling System (AMS) provides a build-in optimization
-class `AnyOptStudy`, It provides only limitted possibilities to control the
-settings and algorithms associated with the optimization problem. Further, it is
-limited to only perform the optimization of the current loaded model. So what if
-you have two seperate models were you wanted to optimize some parameter across
-the performance in both models? or perhaps you wanted to use a specific
-algorithm suitable for your exact problem? To solve these kinds of problems, you
-could perform the optimization process from a third party software such as the
-[Python distribution](https://www.python.org/).  
+The AnyBody Modeling System (AMS) provides a build-in optimization
+class `AnyOptStudy`, and with it you have the opportunity to solve advanced mathematical optimization problems. You can get a taste of how it works in this [new tutorial](https://anyscript.org/tutorials/)
+Of course there can be situations were you want to do a little more than what the AMS optimization offers. Say you have two seperate models were you wanted to optimize some parameter across
+the performance in both models? or perhaps you wanted to use a specific algorithm suitable for your exact problem? To solve these kinds of problems, you
+could perform the optimization process from a third party software. 
 
 In this post we will demonstrate how these problems can be solved using Python.
 This topic is part of the new [Anybodytutorial]
@@ -38,12 +34,10 @@ detail. The model shown in this post is also part of the new AMS tutorial, and
 you can download and read a detailed description of it
 [here.](https://anyscript.org/tutorials/Parameter_studies_and_optimization/lesson3.html)
 
-
 As part of the post we will show how to integrate the [Scipy](https://docs.scipy.org/doc/scipy/reference/index.html) optimization package
-`Scipy.optimize.minimize` by running a 2D Bike model from Python, using the
-AnyPyTools package.
+`Scipy.optimize.minimize` by running the [Anybody 2D bike model](https://anyscript.org/ammr-doc/auto_examples/Sports/plot_BikeModel2D.html#sphx-glr-auto-examples-sports-plot-bikemodel2d-py) from Python, using the AnyPyTools package.
 
-The process of performing optimization of AMS models through Python can be sketched in four steps: 
+The process of performing optimization of AMS models through Python can be sketched in four steps:
 
 - Defining a function to call the models using AnyPyTools and extract the designvariables
 - Defining a objective function to be either minimized or maximized
@@ -52,13 +46,12 @@ The process of performing optimization of AMS models through Python can be sketc
 
 And the whole python code to complete these four steps could look like this:
 
-..code-block:: python
+ ```python
   
-  import math
+    import math
     import scipy
-
     from anypytools import AnyPyProcess
-    from anypytools.macro_commands import Load, OperationRun, Dump, SetValue
+    from anypytools.macro_commands import Load, OperationRun, Dump SetValue
 
 
     def run_model(saddle_height, saddle_pos, silent=False):
@@ -104,6 +97,7 @@ And the whole python code to complete these four steps could look like this:
     )
 
     print(solution)
+```
 
 To elaborate a little on the sections, the first part defines the `run_model`
 function. This function takes in two arguments and assigns them to the
@@ -117,14 +111,15 @@ afterwards it integrates the `Pmet` over the whole time series and returns the
 result. Next up, the constraints and bounds are defined. For this example only a
 seat distance constraint is present. The bounds for each of the design
 variables is defined in the `bounds` variable. Lastly, the optimization process is
-performed, and here it envokes the
-[SLSQP](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html#optimize-minimize-slsqp)
-algorithm. 
+performed, and here it envokes the [SLSQP](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html#optimize-minimize-slsqp)
+algorithm.
 
 And there we have it. A full optimization of a AMS model, and a easy template to
-build other and more advanced optimization processes upon. Make sure to try out
-the full tutorial
+build other and more advanced optimization processes upon. 
+
+Make sure to try out the full tutorial
 [here.](https://anyscript.org/tutorials/Parameter_studies_and_optimization/index.html)
+
 For more details and examples of the capabilities of the
 `Scipy.optimize`package, follow this
 [link](https://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html)
