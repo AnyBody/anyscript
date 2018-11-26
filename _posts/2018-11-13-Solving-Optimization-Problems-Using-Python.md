@@ -21,33 +21,34 @@ tags:
 ---
 
 The AnyBody Modeling System (AMS) provides a build-in optimization
-class `AnyOptStudy`, and with it you have the opportunity to solve advanced mathematical optimization problems. You can get a taste of how it works in this [new tutorial](https://anyscript.org/tutorials/)
+class `AnyOptStudy`, and with it you have the opportunity to solve advanced mathematical optimization problems. 
+
+.. seealso:: You can get a taste of how it works in the [newly updated tutorial on  parameter and optimization studies](https://anyscript.org/tutorials/Parameter_studies_and_optimization/lesson2.html)
+
 Of course there can be situations were you want to do a little more than what the AMS optimization offers. Say you have two seperate models were you wanted to optimize some parameter across
 the performance in both models? or perhaps you wanted to use a specific algorithm suitable for your exact problem? To solve these kinds of problems, you
 could perform the optimization process from a third party software. 
 
 In this post we will demonstrate how these problems can be solved using Python.
-This topic is part of the new [Anybodytutorial]
-(https://anyscript.org/tutorials/Parameter_studies_and_optimization/index.html)
-_Parameter Studies and Optimization_ which describes the content of this post in
-detail. The model shown in this post is also part of the new AMS tutorial, and
-you can download and read a detailed description of it
-[here.](https://anyscript.org/tutorials/Parameter_studies_and_optimization/lesson3.html)
+This topic is part a new [Anybody Tutorial](https://anyscript.org/tutorials/Parameter_studies_and_optimization/lesson3.html) 
+which describes the content of this post in
+detail.
 
 As part of the post we will show how to integrate the [Scipy](https://docs.scipy.org/doc/scipy/reference/index.html) optimization package
 `Scipy.optimize.minimize` by running the [Anybody 2D bike model](https://anyscript.org/ammr-doc/auto_examples/Sports/plot_BikeModel2D.html#sphx-glr-auto-examples-sports-plot-bikemodel2d-py) from Python, using the AnyPyTools package.
 
 The process of performing optimization of AMS models through Python can be sketched in four steps:
 
-- Defining a function to call the models using AnyPyTools and extract the designvariables
-- Defining a objective function to be either minimized or maximized
-- Defining the constraints and bounds of the problem
-- Running the optimization
+1. Defining a function to call the models using AnyPyTools and extract the designvariables
+2. Defining a objective function to be either minimized or maximized
+3. Defining the constraints and bounds of the problem
+4. Running the optimization
 
-And the whole python code to complete these four steps could look like this:
+And the whole Python code to complete these four steps could look like this:
 
- ```python
-  
+{% highlight python  %}
+{% raw %}
+
     import math
     import scipy
     from anypytools import AnyPyProcess
@@ -97,18 +98,23 @@ And the whole python code to complete these four steps could look like this:
     )
 
     print(solution)
-```
+{% endraw %}
+{% endhighlight %}
 
 To elaborate a little on the sections, the first part defines the `run_model`
 function. This function takes in two arguments and assigns them to the
 saddleheight and saddleposition in the AMS model. The function returns the
-`Pmet` value for each timestep in the model. Details and advanced options of
-this function and it's components can be found in the `AnyPyTools`
-[documentation](https://anybody-research-group.github.io/anypytools-docs/). The
-second part defines the objective function in question. This function takes in a
+`Pmet` value for each timestep in the model. 
+
+.. seealso:: Details and advanced options of this function and it's components can be found in the `AnyPyTools`
+             [documentation](https://anybody-research-group.github.io/anypytools-docs/). 
+
+The second part defines the objective function in question. This function takes in a
 list of design variable arguments and utilizes the `run_model` function,
 afterwards it integrates the `Pmet` over the whole time series and returns the
-result. Next up, the constraints and bounds are defined. For this example only a
+result.
+
+Next up, the constraints and bounds are defined. For this example only a
 seat distance constraint is present. The bounds for each of the design
 variables is defined in the `bounds` variable. Lastly, the optimization process is
 performed, and here it envokes the [SLSQP](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html#optimize-minimize-slsqp)
