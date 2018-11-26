@@ -37,8 +37,25 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
+  utterances:
+    theme                : # "github-light" (default), "github-dark"
 staticman:
-  branch                 : "master"
+  allowedFields          : # ['name', 'email', 'url', 'message']
+  branch                 : # "master"
+  commitMessage          : # "New comment by {fields.name}"
+  filename               : # comment-{@timestamp}
+  format                 : # "yml"
+  moderation             : # true
+  path                   : # "/_data/comments/{options.slug}" (default)
+  requiredFields         : # ['name', 'email', 'message']
+  transforms:
+    email                : # "md5"
+  generatedFields:
+    date:
+      type               : # "date"
+      options:
+        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
 reCaptcha:
   siteKey                : "6Lfw4lwUAAAAAGl9_h1wU0-i0njA9phbqKKLLyT-"
   secret                 : "Kk9T7TyxNwsutSdQIgfLAFMPAM/rWcJjM4xCVRzk2kvNBaDfzykywZgp0dzowWfyBzlL5AxzRY40iGZHPKaNJ9az2ZPWL0J+eWR1w3CqGS/noRh6Ty6geaDUVEa+CGqQbq1yDfV4Iw+BRdw6MFFRM7BA7EChgoUqyZoZRwnHB10="
@@ -98,31 +115,47 @@ author:
   bio              : "Experts in Musculoskeletal Modeling and simulations."
   location         : "Aalborg, Denmark"
   email            : "sales@anybodytech.com"
-  uri              :
-  home             : # null (default), "absolute or relative url to link to author home"
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         : "https://www.facebook.com/groups/AnyBodyGroup/"
-  foursquare       :
-  github           : "anybody"
-  gitlab           :
-  google_plus      :
-  keybase          :
-  instagram        :
-  lastfm           :
-  linkedin         : "anybody-technology-a-s"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
-  steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
-  tumblr           :
-  twitter          :
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :  "https://youtube.com/anybodytech"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: mailto:sales@anybodytech.com
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://anybodytech.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      url: "https://www.facebook.com/groups/AnyBodyGroup/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/anybody"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
+
+# Site Footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url:
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      url: "https://www.facebook.com/groups/AnyBodyGroup/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      # url:
+    - label: "GitLab"
+      icon: "fab fa-fw fa-gitlab"
+      url: "https://github.com/anybody"
+    - label: "Bitbucket"
+      icon: "fab fa-fw fa-bitbucket"
+      # url:
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url:
 
 
 # Reading Files
@@ -210,6 +243,7 @@ plugins:
   - jekyll-feed
   - pygments.rb
   - jemoji
+  - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -222,6 +256,7 @@ whitelist:
   - jekyll-feed
   - pygments.rb
   - jemoji
+  - jekyll-include-cache
 
 
 # Archives
