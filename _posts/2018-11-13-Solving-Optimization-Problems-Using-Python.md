@@ -27,8 +27,8 @@ the performance in both models? or perhaps you wanted to use a specific algorith
 could perform the optimization process from a third party software. 
 
 In this post we will demonstrate how these problems can be solved using Python.
-This topic is part of the new [Anybodytutorial]
-(https://anyscript.org/tutorials/Parameter_studies_and_optimization/index.html)
+This topic is part of the new
+[Anybodytutorial](https://anyscript.org/tutorials/Parameter_studies_and_optimization/index.html)
 _Parameter Studies and Optimization_ which describes the content of this post in
 detail. The model shown in this post is also part of the new AMS tutorial, and
 you can download and read a detailed description of it
@@ -37,16 +37,16 @@ you can download and read a detailed description of it
 As part of the post we will show how to integrate the [Scipy](https://docs.scipy.org/doc/scipy/reference/index.html) optimization package
 `Scipy.optimize.minimize` by running the [Anybody 2D bike model](https://anyscript.org/ammr-doc/auto_examples/Sports/plot_BikeModel2D.html#sphx-glr-auto-examples-sports-plot-bikemodel2d-py) from Python, using the AnyPyTools package.
 
-The process of performing optimization of AMS models through Python can be sketched in four steps:
+The process of performing optimization of AMS models through Python can be sketched out in four steps:
 
 - Defining a function to call the models using AnyPyTools and extract the designvariables
 - Defining a objective function to be either minimized or maximized
 - Defining the constraints and bounds of the problem
 - Running the optimization
 
-And the whole python code to complete these four steps could look like this:
+And the whole Python code to complete these four steps could look like this:
 
- ```python
+ ```Python
   
     import math
     import scipy
@@ -101,13 +101,13 @@ And the whole python code to complete these four steps could look like this:
 
 To elaborate a little on the sections, the first part defines the `run_model`
 function. This function takes in two arguments and assigns them to the
-saddleheight and saddleposition in the AMS model. The function returns the
+_saddleheight_ and _saddleposition_ in the AMS model. The function returns the
 `Pmet` value for each timestep in the model. Details and advanced options of
 this function and it's components can be found in the `AnyPyTools`
 [documentation](https://anybody-research-group.github.io/anypytools-docs/). The
 second part defines the objective function in question. This function takes in a
-list of design variable arguments and utilizes the `run_model` function,
-afterwards it integrates the `Pmet` over the whole time series and returns the
+list of design variable arguments and utilizes the `run_model` function.
+Afterwards, it integrates the `Pmet` over the whole time series and returns the
 result. Next up, the constraints and bounds are defined. For this example only a
 seat distance constraint is present. The bounds for each of the design
 variables is defined in the `bounds` variable. Lastly, the optimization process is
