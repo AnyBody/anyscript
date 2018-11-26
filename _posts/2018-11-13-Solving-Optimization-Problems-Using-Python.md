@@ -23,7 +23,8 @@ tags:
 The AnyBody Modeling System (AMS) provides a build-in optimization
 class `AnyOptStudy`, and with it you have the opportunity to solve advanced mathematical optimization problems. 
 
-.. seealso:: You can get a taste of how it works in the [newly updated tutorial on  parameter and optimization studies](https://anyscript.org/tutorials/Parameter_studies_and_optimization/lesson2.html)
+You can get a taste of how it works in the [newly updated tutorial on  parameter and optimization studies](https://anyscript.org/tutorials/Parameter_studies_and_optimization/lesson2.html)
+{: .notice--info}
 
 Of course there can be situations were you want to do a little more than what the AMS optimization offers. Say you have two seperate models were you wanted to optimize some parameter across
 the performance in both models? or perhaps you wanted to use a specific algorithm suitable for your exact problem? To solve these kinds of problems, you
@@ -106,8 +107,8 @@ function. This function takes in two arguments and assigns them to the
 saddleheight and saddleposition in the AMS model. The function returns the
 `Pmet` value for each timestep in the model. 
 
-.. seealso:: Details and advanced options of this function and it's components can be found in the `AnyPyTools`
-             [documentation](https://anybody-research-group.github.io/anypytools-docs/). 
+Details and advanced options of this function and it's components can be found in the [AnyPyTools documentation](https://anybody-research-group.github.io/anypytools-docs/). 
+{: .notice--info}
 
 The second part defines the objective function in question. This function takes in a
 list of design variable arguments and utilizes the `run_model` function,
