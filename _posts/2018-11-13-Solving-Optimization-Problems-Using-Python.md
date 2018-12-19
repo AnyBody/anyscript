@@ -33,14 +33,14 @@ the performance in both models? or perhaps you wanted to use a specific algorith
 could perform the optimization process from a third party software.
 
 In this post we will demonstrate how these problems can be solved using Python.
-This topic is part a new [Anybody Tutorial](https://anyscript.org/tutorials/Parameter_studies_and_optimization/lesson3.html) 
+This topic is part of a new [Anybody Tutorial](https://anyscript.org/tutorials/Parameter_studies_and_optimization/lesson3.html)
 which describes the content of this post in
 detail.
 
 As part of the post we will show how to integrate the [Scipy](https://docs.scipy.org/doc/scipy/reference/index.html) optimization package
 `Scipy.optimize.minimize` by running the [Anybody 2D bike model](https://anyscript.org/ammr-doc/auto_examples/Sports/plot_BikeModel2D.html#sphx-glr-auto-examples-sports-plot-bikemodel2d-py) from Python, using the AnyPyTools package.
 
-<figure class="align-center" style="width: 300px">
+<figure class="align-center" style="width: 550px">
   <img src="/assets/images/posts/2DBikeModel.jpg" alt="2D Bike Model">
   <figcaption>Fig. 1: The 2D bike model used in this example and the new tutorial.</figcaption>
 </figure>
