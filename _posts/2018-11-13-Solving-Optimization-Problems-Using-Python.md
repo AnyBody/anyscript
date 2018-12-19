@@ -3,8 +3,8 @@ title: "Solving optimization problems using Python"
 excerpt: "The ability to create and run mathematical optimization problems, using third party software is a valuable tool."
 author: bkj
 modified: 2018-11-13T10:56:32+02:00
-sitemap: false
-hidden: true
+sitemap: true
+hidden: false
 math: true
 header:
   teaser: 
