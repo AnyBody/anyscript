@@ -41,7 +41,7 @@ As part of the post we will show how to integrate the [Scipy](https://docs.scipy
 `Scipy.optimize.minimize` by running the [Anybody 2D bike model](https://anyscript.org/ammr-doc/auto_examples/Sports/plot_BikeModel2D.html#sphx-glr-auto-examples-sports-plot-bikemodel2d-py) from Python, using the AnyPyTools package.
 
 <figure class="align-center" style="width: 300px">
-  <img src="/assets/images/posts/2DBikeModel" alt="2D Bike Model">
+  <img src="/assets/images/posts/2DBikeModel.jpg" alt="2D Bike Model">
   <figcaption>Fig. 1: The 2D bike model used in this example and the new tutorial.</figcaption>
 </figure>
 
