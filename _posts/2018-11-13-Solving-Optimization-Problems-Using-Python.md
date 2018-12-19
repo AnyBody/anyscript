@@ -23,7 +23,7 @@ tags:
 The AnyBody Modeling System (AMS) provides a build-in optimization
 class `AnyOptStudy`, and with it you have the opportunity to solve advanced mathematical optimization problems.
 
-You can get a taste of how it works in the [newly updated tutorial on  parameter and optimization studies](https://anyscript.org/tutorials/Parameter_studies_and_optimization/lesson2.html)
+**See also:** You can get a taste of how it works in the [newly updated tutorial on  parameter and optimization studies](https://anyscript.org/tutorials/Parameter_studies_and_optimization/lesson2.html)
 {: .notice--info}
 
 ## Extending the optimization
@@ -140,7 +140,7 @@ For more details and examples of the capabilities of the
 And there we have it. A full optimization of a AMS model, and a easy template to
 build other and more advanced optimization processes upon.
 
-Make sure to try out the full AMS tutorial
+**Try it now:** Make sure to try out the full AMS tutorial
 [here.](https://anyscript.org/tutorials/Parameter_studies_and_optimization/index.html)
 {: .notice--warning}
 
