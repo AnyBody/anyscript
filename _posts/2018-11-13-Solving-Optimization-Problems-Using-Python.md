@@ -21,14 +21,16 @@ tags:
 ---
 
 The AnyBody Modeling System (AMS) provides a build-in optimization
-class `AnyOptStudy`, and with it you have the opportunity to solve advanced mathematical optimization problems. 
+class `AnyOptStudy`, and with it you have the opportunity to solve advanced mathematical optimization problems.
 
 You can get a taste of how it works in the [newly updated tutorial on  parameter and optimization studies](https://anyscript.org/tutorials/Parameter_studies_and_optimization/lesson2.html)
 {: .notice--info}
 
+## Extending the optimization
+
 Of course there can be situations were you want to do a little more than what the AMS optimization offers. Say you have two seperate models were you wanted to optimize some parameter across
 the performance in both models? or perhaps you wanted to use a specific algorithm suitable for your exact problem? To solve these kinds of problems, you
-could perform the optimization process from a third party software. 
+could perform the optimization process from a third party software.
 
 In this post we will demonstrate how these problems can be solved using Python.
 This topic is part a new [Anybody Tutorial](https://anyscript.org/tutorials/Parameter_studies_and_optimization/lesson3.html) 
@@ -37,6 +39,13 @@ detail.
 
 As part of the post we will show how to integrate the [Scipy](https://docs.scipy.org/doc/scipy/reference/index.html) optimization package
 `Scipy.optimize.minimize` by running the [Anybody 2D bike model](https://anyscript.org/ammr-doc/auto_examples/Sports/plot_BikeModel2D.html#sphx-glr-auto-examples-sports-plot-bikemodel2d-py) from Python, using the AnyPyTools package.
+
+<figure class="align-center" style="width: 300px">
+  <img src="/assets/images/posts/2DBikeModel" alt="2D Bike Model">
+  <figcaption>Fig. 1: The 2D bike model used in this example and the new tutorial.</figcaption>
+</figure>
+
+## Optimization example
 
 The process of performing optimization of AMS models through Python can be sketched in four steps:
 
@@ -102,12 +111,14 @@ And the whole Python code to complete these four steps could look like this:
 {% endraw %}
 {% endhighlight %}
 
+## Breaking down the sections
+
 To elaborate a little on the sections, the first part defines the `run_model`
 function. This function takes in two arguments and assigns them to the
 saddleheight and saddleposition in the AMS model. The function returns the
 `Pmet` value for each timestep in the model. 
 
-Details and advanced options of this function and it's components can be found in the [AnyPyTools documentation](https://anybody-research-group.github.io/anypytools-docs/). 
+Details and advanced options of this function and it's components can be found in the [AnyPyTools documentation](https://anybody-research-group.github.io/anypytools-docs/).
 {: .notice--info}
 
 The second part defines the objective function in question. This function takes in a
@@ -121,12 +132,16 @@ variables is defined in the `bounds` variable. Lastly, the optimization process 
 performed, and here it envokes the [SLSQP](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html#optimize-minimize-slsqp)
 algorithm.
 
-And there we have it. A full optimization of a AMS model, and a easy template to
-build other and more advanced optimization processes upon. 
-
-Make sure to try out the full tutorial
-[here.](https://anyscript.org/tutorials/Parameter_studies_and_optimization/index.html)
-
 For more details and examples of the capabilities of the
 `Scipy.optimize`package, follow this
-[link](https://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html)
+[link.](https://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html)
+{: .notice--info}
+
+And there we have it. A full optimization of a AMS model, and a easy template to
+build other and more advanced optimization processes upon.
+
+Make sure to try out the full AMS tutorial
+[here.](https://anyscript.org/tutorials/Parameter_studies_and_optimization/index.html)
+{: .notice--warning}
+
+This post is hosted on GitHub, feel free to provide feedback [here.](https://github.com/AnyBody/anyscript)
