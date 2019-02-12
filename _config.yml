@@ -24,38 +24,16 @@ url                      : "https://anyscript.org"
 #baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "AnyBody/anyscript"
 teaser                   : "/assets/images/teaser.jpg"
+logo                     : "/assets/images/anyscript_logo.svg"
+masthead_title           : " "
+
+
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : "discourse"
-  disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : "http://forum.anyscript.org/"
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-  utterances:
-    theme                : # "github-light" (default), "github-dark"
-staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment by {fields.name}"
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
-  transforms:
-    email                : # "md5"
-  generatedFields:
-    date:
-      type               : # "date"
-      options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-  endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
 reCaptcha:
   siteKey                : "6Lfw4lwUAAAAAGl9_h1wU0-i0njA9phbqKKLLyT-"
   secret                 : "Kk9T7TyxNwsutSdQIgfLAFMPAM/rWcJjM4xCVRzk2kvNBaDfzykywZgp0dzowWfyBzlL5AxzRY40iGZHPKaNJ9az2ZPWL0J+eWR1w3CqGS/noRh6Ty6geaDUVEa+CGqQbq1yDfV4Iw+BRdw6MFFRM7BA7EChgoUqyZoZRwnHB10="
@@ -88,7 +66,8 @@ facebook:
   app_id                 :
   publisher              :
 og_image                 : "/assets/images/og_image.jpg"
-logo                     : "/assets/images/anyscript_logo_community.png"
+
+
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
