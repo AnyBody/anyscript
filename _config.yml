@@ -33,7 +33,7 @@ words_per_minute         : 200
 comments:
   provider               : "discourse"
   discourse:
-    server               : "http://forum.anyscript.org/"
+    server               : "forum.anyscript.org"
 reCaptcha:
   siteKey                : "6Lfw4lwUAAAAAGl9_h1wU0-i0njA9phbqKKLLyT-"
   secret                 : "Kk9T7TyxNwsutSdQIgfLAFMPAM/rWcJjM4xCVRzk2kvNBaDfzykywZgp0dzowWfyBzlL5AxzRY40iGZHPKaNJ9az2ZPWL0J+eWR1w3CqGS/noRh6Ty6geaDUVEa+CGqQbq1yDfV4Iw+BRdw6MFFRM7BA7EChgoUqyZoZRwnHB10="
