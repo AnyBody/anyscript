@@ -31,7 +31,7 @@ comments:
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
-    server               : http://forum.anyscript.org/
+    server               : "http://forum.anyscript.org/"
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
