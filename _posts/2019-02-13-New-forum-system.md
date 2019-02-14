@@ -5,7 +5,6 @@ author: mel
 modified: 2019-02-15T10:56:32+02:00
 sitemap: false
 hidden: true
-math: false
 header:
   teaser: "/assets/images/posts/new-forum_teaser.png"
   overlay_image: "/assets/images/posts/new-forum_header.png"
@@ -46,17 +45,18 @@ There is also options to search individual topics or options to refine the searc
 
 ## Nice editor with preview
 
-The editor in really nice. It supports a live preview pane, markdown formatting, Math using LaTeX, drag-drop images an much more. Even if you are not familiar with markdown syntax it is easy to use with the buttons on the toolbar. 
+The editor is really nice. It supports a live preview pane, markdown formatting, math using LaTeX, drag-drop images an much more. Even if you are not familiar with markdown syntax it is easy to use with the buttons on the toolbar. 
 
 ![Search](/assets/images/posts/new-forum_editor.png)
 
 
 # Migration to the new forum system
 
-We migrated all the posts from the old system to the new system as well as all users how had previously posted on the old forum. Passwords could not be migrated, so you will have to reset your password the first time you log in. Just click the 'I forgot my password' link the first time you access the new site.
+We migrated all the posts from the old forum and users how had previously posted on the old forum. Passwords could not be migrated, so you will have to reset your password the first time you log in. Just click the 'I forgot my password' link the first time you access the new site.
 
 ![Search](/assets/images/posts/new-forum_login.png)
 
 If you have never used the forum system you will have to create a new user account. The same is case if you got a new email address or if you just want to start from scratch. 
 
-**Try it now:** So give the new forum a try. [Log in and join the community](http://forum.anyscript.org) {: .notice--success}
+**Try it now:** So give the new forum a try. [Log in and join the community](http://forum.anyscript.org)
+{: .notice--success}
