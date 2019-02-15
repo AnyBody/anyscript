@@ -44,8 +44,12 @@ gallery:
     title: "Simulating a Motion (Intro 9/9)"
 ---
 
+## Introductory video series
+
 If you have never done musculoskeletal modeling with the [AnyBody Modeling System (AMS)](http://anybodytech.com/) check out the series of short introductory videos below. 
 {: .notice--primary}
+
+{% include gallery caption="AnyBody Introductory video serie" %}
 
 ## How to get the AMMR?
 
@@ -94,6 +98,3 @@ The most important are:
 There also one or two PhD courses on musculoskeletal modeling every year in Europe, which use the AnyBody modeling System in the course. The courses are usually hosted by [Aalborg University](http://www.biomechanics.m-tech.aau.dk/) in Denmark and [OTH Regensburg](https://www.oth-regensburg.de/?id=1166) in Germany. 
 
 
-## Introductory video series
-
-{% include gallery caption="AnyBody Introductory video serie" %}
