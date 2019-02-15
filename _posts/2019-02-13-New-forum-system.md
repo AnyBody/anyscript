@@ -3,12 +3,12 @@ title: "New AnyScript Forum"
 excerpt: "We have just launched a new forum site for the AnyScript community."
 author: mel
 modified: 2019-02-15T10:56:32+02:00
-sitemap: false
-hidden: true
+sitemap: true
+hidden: false
 header:
   teaser: "/assets/images/posts/new-forum_teaser.png"
   overlay_image: "/assets/images/posts/new-forum_header.png"
-  overlay_filter: 0.5
+  overlay_filter: 0.4
   cta_label: "<i class='fab fa-discourse'></i> Visit the new forum"
   cta_url: "http://forum.anyscript.org"
 categories:
@@ -21,8 +21,6 @@ tags:
 This week we launched a new forum site for the AnyScript community ✨ The new
 site replaces the old forum which has served the last 10 years as a place for
 new and experienced users to get and give help on the AnyBody Modeling System. 
-
-
 
 
 The old forum had served well. Around 10.000 posts and 1800 topics were created
@@ -43,13 +41,11 @@ automatically. Just scroll down.
 
 Search now works infinitely better than before. Just type in your search terms
 to easily find related posts. 
-
 ![Search](/assets/images/posts/new-forum_search.png)
 
 There is also options to search individual topics or options to refine the
 search to dates, categories, tags, users etc. So now it is much easier to find
 the relevant information without having to make a new topic. 
-
 
 **Nice editor with preview:**
 
@@ -73,5 +69,5 @@ If you have never used the forum system you will have to create a new user
 account. The same is case if you got a new email address or if you just want to
 start from scratch. 
 
-[<i class='fab fa-discourse'></i> Give the new forum a try.](http://forum.anyscript.org){: .btn .btn--success .btn--large}
+[<i class='fab fa-discourse'></i> Give the new forum a try...](http://forum.anyscript.org){: .btn .btn--success .btn--large}
 
