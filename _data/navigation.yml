@@ -9,14 +9,22 @@ main:
   - title: 'Forum'
     url: http://forum.anyscript.org/
 
-  - title: 'Wiki <i class="fas fa-external-link-alt" aria-hidden="true"></i>'
-    url: https://github.com/AnyBody/support/wiki
-
   - title: 'Repositories <i class="fas fa-external-link-alt" aria-hidden="true"></i>'
     url: https://github.com/AnyBody/
 
-    
-    
+  - title: 'AnyBody Tutorials'
+    url: https://anyscript.org/tutorials/
+
+  - title: 'AMMR Documentation'
+    url: https://anyscript.org/ammr-doc/
+
+  - title: 'Wiki <i class="fas fa-external-link-alt" aria-hidden="true"></i>'
+    url: https://github.com/AnyBody/support/wiki
+
+  - title: 'Youtube channel <i class="fab fa-youtube" aria-hidden="true"></i>'
+    url: https://www.youtube.com/user/anybodytech
+
+
 posts:
     - title: "Show all posts:"
       children:
