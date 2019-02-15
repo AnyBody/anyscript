@@ -9,8 +9,10 @@ main:
   - title: 'Forum'
     url: http://forum.anyscript.org/
 
-  - title: 'Repositories <i class="fas fa-external-link-alt" aria-hidden="true"></i>'
+  - title: 'Repositories'
     url: https://github.com/AnyBody/
+
+    #  - title: 'Repositories <i class="fas fa-external-link-alt" aria-hidden="true"></i>'
 
   - title: 'AnyBody Tutorials'
     url: https://anyscript.org/tutorials/
@@ -18,7 +20,7 @@ main:
   - title: 'AMMR Documentation'
     url: https://anyscript.org/ammr-doc/
 
-  - title: 'Wiki <i class="fas fa-external-link-alt" aria-hidden="true"></i>'
+  - title: 'Wiki'
     url: https://github.com/AnyBody/support/wiki
 
   - title: 'Youtube channel <i class="fab fa-youtube" aria-hidden="true"></i>'
