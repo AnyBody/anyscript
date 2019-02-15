@@ -25,7 +25,7 @@ url                      : "https://anyscript.org"
 repository               : "AnyBody/anyscript"
 teaser                   : "/assets/images/teaser.jpg"
 logo                     : "/assets/images/anyscript_logo.svg"
-masthead_title           : "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+masthead_title           : "&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"
 
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
