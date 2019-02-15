@@ -6,7 +6,7 @@ modified: 2019-02-15T10:56:32+02:00
 sitemap: false
 hidden: true
 header:
-  teaser: "/assets/images/posts/new-forum_teaser.svg"
+  teaser: "/assets/images/posts/new-forum_teaser.png"
   overlay_image: "/assets/images/posts/new-forum_header.png"
   overlay_filter: 0.5
   cta_label: "<i class='fab fa-discourse'></i> Visit the new forum"
@@ -35,12 +35,9 @@ on both desktop and mobile. It has a lot of nice features:
 
 **Conversations and not pages:**
 
-Posts structured by conversations, and not spread across multiple pages where you have to click the next page constantly. Instead, new content loads automatically. Just scroll down.
-
-<video preload="auto" width="80%" poster="/assets/images/posts/new-forum_scroll.jpg" style="display:block; margin: 0 auto;" autoplay loop muted>
-    <source src="/assets/images/posts/new-forum_scroll.mp4" type="video/mp4">
-</video>
-
+Posts structured by conversations, and not spread across multiple pages where
+you have to click the next page constantly. Instead, new content loads
+automatically. Just scroll down.
 
 **Effective search:**
 
