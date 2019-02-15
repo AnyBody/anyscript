@@ -22,3 +22,19 @@ html {
         font-size: 18px; // originally 22px
     }
 }
+
+
+#watermark {
+    color: #e0e0e0;
+    font-size: 200pt;
+    text-align: center;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    position: fixed;
+    min-height:50%; 
+    min-width:50%;
+    margin: 0;
+    z-index: -1;
+    left:50;
+    top:50;
+  }
