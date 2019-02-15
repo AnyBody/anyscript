@@ -8,7 +8,11 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="{{ '/' | relative_url }}"><img src="{{site.baseurl}}/assets/images/anyscript_logo.svg" height="200" width="180" align="top"/></a>
+          {% unless logo_path == empty %}
+          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt=""></a>
+        {% endunless %}
+        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.masthead_title | default: site.title }}</a>
+        <!-- <a class="site-title" href="{{ '/' | relative_url }}"><img src="{{site.baseurl}}/assets/images/anyscript_logo.svg" height="200" width="180" align="top"/> </a> -->
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
             {%- if link.url contains '://' -%}
