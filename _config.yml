@@ -43,10 +43,10 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true
 search_full_content      : true
-search_provider          : google
-google:
-  search_engine_id       : "018147860991122944355:lwlcgdyuutq"
-  instant_search         : # false (default), true
+search_provider          : lunr
+#google:
+#  search_engine_id       : "018147860991122944355:lwlcgdyuutq"
+#  instant_search         : true
 # SEO Related
 google_site_verification : "Gads1dEJfrM11RlSRBUKWHHjKWkf_JfNOC1Deq7LaF0"
 
