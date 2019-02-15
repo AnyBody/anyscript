@@ -4,6 +4,7 @@ excerpt: "In this post you will see some manual and automatic techniques to crea
 modified: 2017-03-27T09:55:10+01:00
 author: mel
 header:
+  teaser: "/assets/images/posts/video_post_teaser.png"
   video:
     id: ofPjGwc4FY8
     provider: youtube
