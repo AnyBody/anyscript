@@ -1,8 +1,8 @@
 ---
 title: "Body Model Configuration App"
 excerpt: "This introduces a python application to help configure your model."
-hidden: true
-sitemap: false
+hidden: false
+sitemap: true
 layout: single
 author: ms
 header:
