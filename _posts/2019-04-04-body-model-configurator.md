@@ -48,7 +48,7 @@ The BM-Plugin targets both beginner and advanced AMS users. If you have little
 to no experience using AnyScript, the BM-Plugin will help you a lot in getting
 started with it and to understand how switches and BM statements work. If you
 are an advanced AMS user, you will find configuring your human model much easier
-and much faster by using the plugin. And don't worry about loosing your freedom
+and much faster by using the plugin. And don't worry about losing your freedom
 with AnyScript! BM Plugin is not meant to replace it, it is meant to write it
 for you, so it saves you time.
 
@@ -63,7 +63,7 @@ starting with version v7.2. All you have to do is to make sure that you have
 these versions or later available on your computer. You can find more
 information about how to get the latest AMMR
 [here](https://anyscript.org/getting-started/). Once you have everything ready
-you can load any model containing the the AnyBody human model. I.e. that is any model that has
+you can load any model containing the the AnyBody human model, i.e. that is any model that has
 the following:
 
 {% highlight AnyScriptDoc %}
@@ -114,7 +114,7 @@ and modified in the `Advanced` tab.
 
 By having the presented overview of the Plugin, you should be ready to use it
 now. However, if you are interested in finding some details about how it works
-behind scenes the too, continue reading.
+behind the scenes, continue reading.
 
 ## How BM-Plugin works (tl;dr)
 
@@ -124,7 +124,7 @@ to determine if it is included. If it is, the Plugin will create a new file
 named `BodyModelConfiguration.any` inside the `Model` folder next to your
 `.main.any` file.
 
-**Note!** All the example models in the AMMR already comes with an `BodyModelConfiguration.any` file pre-included.
+**Note!** All the example models in the AMMR already come with an `BodyModelConfiguration.any` file pre-included.
 {: .notice}
 
 The plugin will then ask you if you allow it to include this
