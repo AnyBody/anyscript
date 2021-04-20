@@ -101,13 +101,13 @@ If for example, we have a rigid body with angular velocity $$\vec{\omega}$$ and
 some point $$P$$ with position $$\vec{r}_P$$ and velocity $$\vec{v}_p$$ then we can
 define the different properties:
 
-| Quantity                              |                        Description                     |
-| ---------------------------------- | ------------------------------------------------------ | 
-| $$ \omega = \|\vec{\omega}\|$$                       | The magnitude of angular rotation.     |
-| $$ \vec{e}_{IOAR} = \frac{\vec{\omega} }{\omega}$$   | The direction of the intantanous axis of rotation.  |
-| $$\vec{r}_C = \vec{r}_P + \frac{\vec{\omega}\times\vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }$$   |  The point C on the intantanous axis of rotation.      |
-| $$ h = \frac{\vec{\omega} \cdot \vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }$$  | Ratio of angular to linear angular velocity |
-| $$ \vec{v}_C = h\vec{\omega} $$  | The linear velocity at point $$C$$ along the axis of rotation.  |
+| Quantity                                                                                         |                        Description                              |
+| ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- | 
+| $$ \omega = \|\vec{\omega}\|$$                                                                   |             The magnitude of angular rotation.                  |
+| $$ \vec{e}_{IOAR} = \frac{\vec{\omega} }{\omega}$$                                               | The direction of the intantanous axis of rotation.              |
+| $$\vec{r}_C = \vec{r}_P + \frac{\vec{\omega}\times\vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }$$   |  The point C on the intantanous axis of rotation.               |
+| $$ h = \frac{\vec{\omega} \cdot \vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }$$                     | Ratio of angular to linear angular velocity                     |
+| $$ \vec{v}_C = h\vec{\omega} $$                                                                  | The linear velocity at point $$C$$ along the axis of rotation.  |
 
 The list of properties is inspired by this answer from [StackExchange
 Physics](https://physics.stackexchange.com/questions/173987/how-can-i-relate-linear-and-angular-motion-using-a-single-formula/174209#174209)
