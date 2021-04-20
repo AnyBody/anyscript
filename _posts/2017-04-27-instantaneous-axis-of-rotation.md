@@ -40,7 +40,7 @@ and location as the object moves.
 
 The angular velocity of rigid body is a vector quantity shared by all point of
 the rigid body. My old engineering math book defines it from the rate of change
-of the rotation matrix $R$:
+of the rotation matrix $$R$$:
 
 $$ \frac{ {\mathrm d} }{ {\mathrm d}t}R = \vec{\omega} \times R$$
 
@@ -48,9 +48,9 @@ If we know the angular and linear velocity of any point on a rigid body, we can
 calculate the properties of the screw motion and the instantaneous axis of
 rotation. 
 
-Using $\vec{\omega}$ we can write the velocity $\vec{v}_P$ of a point $P$ at
-some distance $\vec{r}$ from the instantaneous axis of rotation as a sum of the
-linear velocity $\vec{v}_C$ along the axis of rotation and the tangential
+Using$$\vec{\omega}$$we can write the velocity $$\vec{v}_P$$ of a point $$P$$ at
+some distance $$\vec{r}$$ from the instantaneous axis of rotation as a sum of the
+linear velocity $$\vec{v}_C$$ along the axis of rotation and the tangential
 velocity around the axis of rotation:
 
 $$\begin{equation} \label{eq:1} \vec{v}_P = \vec{v}_C + \vec{\omega} \times \vec{r} \end{equation}$$
@@ -61,26 +61,26 @@ $$\begin{equation} \label{eq:1} \vec{v}_P = \vec{v}_C + \vec{\omega} \times \vec
 </figure>
 
 Similarly we can also calculate backwards and find the intantanous axis of
-rotation at some distance $-\vec{r}$ from any point if we know the linear
+rotation at some distance $$-\vec{r}$$ from any point if we know the linear
 velocity of the point and the angular velocity. This is given by:
 
 $$\begin{equation} \label{eq:2} -\vec{r}= \frac{\vec{\omega} \times \vec{v}_P }{
 \vec{\omega}\cdot\vec{\omega} } \end{equation}$$
 
-Thus if know the position of a point $\vec{r}_P$, its 
-linear velocity $\vec{v}_P$ we can find closest point
+Thus if know the position of a point $$\vec{r}_P$$, its 
+linear velocity $$\vec{v}_P$$ we can find closest point
 $\vec{r}_C$ on the rotation axis as:
 
  $$ \vec{r}_C = \vec{r}_P - \vec{r} = \vec{r}_P + \frac{\vec{\omega}\times\vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }$$
 
-> **Short proof of $\ref{eq:2}$, skip it if you like:**
+> **Short proof of $$\ref{eq:2}$$, skip it if you like:**
 >
->Start with $\vec{\omega} \times \vec{v}_P$ and insert $\ref{eq:1}$. Since
->$\vec{\omega}$ and $\vec{v}_C$ are parallel their cross product cancel out.
+>Start with $$\vec{\omega} \times \vec{v}_P$$ and insert $$\ref{eq:1}$$. Since
+>$$\vec{\omega}$$ and $$\vec{v}_C$$ are parallel their cross product cancel out.
 >
 > $$\require{cancel} \vec{\omega} \times \vec{v}_P = \vec{\omega} \times (\vec{v}_C+\vec{\omega} \times \vec{r})= \cancel{\vec{\omega} \times \vec{v}_C}+\vec{\omega}\times (\vec{\omega} \times \vec{r})$$
 >
-> Next we use the [vector tripple product](https://en.wikipedia.org/wiki/Triple_product#Vector_triple_product) to expand, and we note that $\vec{\omega}\cdot\vec{r}$ cancel out since the shortest vector from the rotation axis to any point is always perpendicular to angular velocity:
+> Next we use the [vector tripple product](https://en.wikipedia.org/wiki/Triple_product#Vector_triple_product) to expand, and we note that $$\vec{\omega}\cdot\vec{r}$$ cancel out since the shortest vector from the rotation axis to any point is always perpendicular to angular velocity:
 >
 > $$ \require{cancel}\vec{\omega}\times (\vec{\omega} \times \vec{r}) = \vec{\omega}(\cancel{\vec{\omega}\cdot\vec{r} })-\vec{r}(\vec{\omega}\cdot\vec{\omega}) $$
 >
@@ -97,8 +97,8 @@ $\vec{r}_C$ on the rotation axis as:
 
 ## Properties
 
-If for example, we have a rigid body with angular velocity $\vec{\omega}$ and
-some point $P$ with position $\vec{r}_P$ and velocity $\vec{v}_p$ then we can
+If for example, we have a rigid body with angular velocity $$\vec{\omega}$$ and
+some point $$P$$ with position $$\vec{r}_P$$ and velocity $$\vec{v}_p$$ then we can
 define the different properties:
 
 | Quantity                              |                        Description                     |
@@ -107,7 +107,7 @@ define the different properties:
 | $$ \vec{e}_{IOAR} = \frac{\vec{\omega} }{\omega}$$   | The direction of the intantanous axis of rotation.  |
 | $$\vec{r}_C = \vec{r}_P + \frac{\vec{\omega}\times\vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }$$   |  The point C on the intantanous axis of rotation.      |
 | $$ h = \frac{\vec{\omega} \cdot \vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }$$  | Ratio of angular to linear angular velocity |
-| $$ \vec{v}_C = h\vec{\omega} $$  | The linear velocity at point $C$ along the axis of rotation.  |
+| $$ \vec{v}_C = h\vec{\omega} $$  | The linear velocity at point $$C$$ along the axis of rotation.  |
 
 The list of properties is inspired by this answer from [StackExchange
 Physics](https://physics.stackexchange.com/questions/173987/how-can-i-relate-linear-and-angular-motion-using-a-single-formula/174209#174209)
