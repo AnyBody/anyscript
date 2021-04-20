@@ -126,11 +126,11 @@ the model can support for a given posture. To check our results, we can
 calculate the maximum strength for our four scenarios using equation $$\ref{eq:3}$$ and try to implement the output load in our models. Table 1. shows the calculated strengths of the models, and the $$m_{act}$$ when applying the $$load_{max}$$ values.
 
 | Movement  | $$Load_{max}$$ (N)   | New $$m_{act}$$ |
-|-----------|--------------------|-------------  |
-| Extension | 70.97891372        | 1.0           |
-| Flexion   | 78.33099967        | 1.0           |
-| Push      | 93.43104145        | 1.0           | 
-| Pull      | 113.1664796        | 1.0           |
+|-----------|----------------------|-------------  |
+| Extension | 70.97891372          | 1.0           |
+| Flexion   | 78.33099967          | 1.0           |
+| Push      | 93.43104145          | 1.0           | 
+| Pull      | 113.1664796          | 1.0           |
 
 Table 1: Calculated $$load_{max}$$ and new $$m_{act}$$ for each movement.
 {:.notice}
