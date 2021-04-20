@@ -113,17 +113,17 @@ $$\begin{equation} \label{eq:2} a = \frac{(m_{act_{2}} - m_{act_{1}})}{(load_{2}
 
 Now that we know the coordinates of two points and the slope, we can
 start figuring out what the load is for an activity of 1 ( $$m_{act} = 1$$ ). For this
-we again look at equation $$\ref{eq:2}$$, only this time we know the slope, the point
+we again look at equation $$\eqref{eq:2}$$, only this time we know the slope, the point
 $(load_{1},m_{act_{1}})$$, and the $$m_{act}$ coordinate,
 which should be equal to 1. We are therefore interested in finding the corresponding
-$load_{max}$$. We rearrange equation $$\ref{eq:2}$, into:
+$load_{max}$$. We rearrange equation $$\eqref{eq:2}$, into:
 
 
 $$\begin{equation} \label{eq:3} load_{max} = \frac{1}{a} - \frac{m_{act_{1}}}{a} + load_{1} \end{equation}$$
 
 This allows us to evaluate what the maximum load $$load_{max}$$ is, that
 the model can support for a given posture. To check our results, we can
-calculate the maximum strength for our four scenarios using equation $$\ref{eq:3}$$ and try to implement the output load in our models. Table 1. shows the calculated strengths of the models, and the $$m_{act}$$ when applying the $$load_{max}$$ values.
+calculate the maximum strength for our four scenarios using equation $$\eqref{eq:3}$$ and try to implement the output load in our models. Table 1. shows the calculated strengths of the models, and the $$m_{act}$$ when applying the $$load_{max}$$ values.
 
 | Movement  | $$Load_{max}$$ (N)   | New $$m_{act}$$ |
 |-----------|----------------------|-----------------|

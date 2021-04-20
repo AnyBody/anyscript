@@ -73,9 +73,9 @@ $\vec{r}_C$ on the rotation axis as:
 
  $$ \vec{r}_C = \vec{r}_P - \vec{r} = \vec{r}_P + \frac{\vec{\omega}\times\vec{v}_P}{\vec{\omega}\cdot\vec{\omega} }$$
 
-> **Short proof of $$\ref{eq:2}$$, skip it if you like:**
+> **Short proof of $$\eqref{eq:2}$$, skip it if you like:**
 >
->Start with $$\vec{\omega} \times \vec{v}_P$$ and insert $$\ref{eq:1}$$. Since
+>Start with $$\vec{\omega} \times \vec{v}_P$$ and insert $$\eqref{eq:1}$$. Since
 >$$\vec{\omega}$$ and $$\vec{v}_C$$ are parallel their cross product cancel out.
 >
 > $$\require{cancel} \vec{\omega} \times \vec{v}_P = \vec{\omega} \times (\vec{v}_C+\vec{\omega} \times \vec{r})= \cancel{\vec{\omega} \times \vec{v}_C}+\vec{\omega}\times (\vec{\omega} \times \vec{r})$$
